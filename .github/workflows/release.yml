@@ -1,0 +1,43 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Crea uno zip per ogni skill
+        run: |
+          set -euo pipefail
+          mkdir -p dist
+          root="$PWD"
+          found=0
+          for dir in plugins/calvizie-pagine/skills/*/; do
+            [ -f "${dir}SKILL.md" ] || continue
+            name="$(basename "$dir")"
+            (cd plugins/calvizie-pagine/skills && zip -r -q "$root/dist/$name.zip" "$name" -x '*.DS_Store')
+            found=$((found + 1))
+          done
+          if [ "$found" -eq 0 ]; then
+            echo "Nessuna skill trovata" >&2
+            exit 1
+          fi
+          ls -l dist
+
+      - name: Crea la release e allega gli zip
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          if ! gh release view "$GITHUB_REF_NAME" >/dev/null 2>&1; then
+            gh release create "$GITHUB_REF_NAME" --generate-notes
+          fi
+          gh release upload "$GITHUB_REF_NAME" dist/*.zip --clobber

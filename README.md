@@ -9,14 +9,24 @@ Per ogni pagina Claude consegna l'HTML (e il CSS per le pagine partner), l'elenc
 
 ## Installazione
 
-In Claude Code:
+### Su claude.ai (consigliata)
+
+1. Apri **Customize > Plugins** e scegli **Add marketplace**.
+2. Inserisci `wilco-group/calvizie-pagine-claude-plugin`.
+3. Installa il plugin **calvizie-pagine**.
+
+**Aggiornare.** Quando esce una nuova versione, apri di nuovo **Customize > Plugins**, entra nel marketplace e premi **Check for updates**, poi aggiorna il plugin.
+
+### Alternativa: skill singole con gli zip
+
+Se il marketplace non è disponibile, scarica gli zip dalla pagina [Releases](https://github.com/wilco-group/calvizie-pagine-claude-plugin/releases) (ultima versione, sezione *Assets*): `landing.zip` e `pagina-partner.zip`. Poi in claude.ai apri **Customize > Skills > Upload** e carica ciascuno zip. Per aggiornare, scarica gli zip nuovi e caricali di nuovo.
+
+### In Claude Code
 
 ```
 /plugin marketplace add wilco-group/calvizie-pagine-claude-plugin
 /plugin install calvizie-pagine@calvizie-pagine
 ```
-
-Nelle app di Claude che supportano i plugin, aggiungi questo repository GitHub come marketplace dalle impostazioni dei plugin e installa **calvizie-pagine**.
 
 Poi basta chiedere, per esempio: "fai una landing per Calvizie.net per la consulenza gratuita" oppure "fai una pagina partner per Calvizie.net per la Farmacia Esempio".
 
@@ -29,6 +39,7 @@ plugins/calvizie-pagine/
   skills/landing/                          SKILL.md, references/, examples/landing-esempio.html
   skills/pagina-partner/                   SKILL.md, references/, examples/farmacia-esempio.html + .css
 bin/sync-regole.sh                         allinea i file di riferimento
+.github/workflows/release.yml              a ogni tag v*, crea la Release con gli zip delle skill
 ```
 
 In ogni skill, `references/` contiene:
@@ -58,6 +69,12 @@ php bin/check-html.php <file.html> [file.css] --type=partner   # oppure --type=l
 
 Gli esempi usano l'indirizzo provvisorio `https://calvizie.net/wp-content/uploads/FOTO/`, che la regola R02 segnala di proposito finché non viene sostituito con la cartella vera della Libreria media: per controllarli, sostituiscilo prima con una cartella qualsiasi (per esempio `https://calvizie.net/wp-content/uploads/2026/11/`).
 
-Ricorda di aggiornare `version` in `plugins/calvizie-pagine/.claude-plugin/plugin.json` (e in `marketplace.json`) a ogni modifica delle skill.
+## Pubblicare una nuova versione
+
+1. Esegui `bin/sync-regole.sh` (allinea regole, scheda e guida) e `bin/sync-regole.sh --check`.
+2. Aggiorna `version` in `plugins/calvizie-pagine/.claude-plugin/plugin.json` e in `.claude-plugin/marketplace.json` (stesso numero).
+3. Fai il commit delle modifiche.
+4. Crea il tag `vX.Y.Z` (stesso numero della versione) e mandalo su GitHub: `git tag vX.Y.Z && git push origin vX.Y.Z`.
+5. Il workflow `.github/workflows/release.yml` crea la Release e allega uno zip per ogni skill. Controlla con `gh release view vX.Y.Z --repo wilco-group/calvizie-pagine-claude-plugin`.
 
 Il repository è pubblico: niente chiavi, indirizzi di fogli o Web App, email interne, nomi di persone o contenuti dei clienti.
