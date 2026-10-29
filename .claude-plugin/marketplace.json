@@ -1,0 +1,17 @@
+{
+  "name": "calvizie-pagine",
+  "owner": {
+    "name": "Wilco Group"
+  },
+  "metadata": {
+    "description": "Skill per progettare landing e pagine partner di calvizie.net pronte per il plugin WordPress Pagine Calvizie."
+  },
+  "plugins": [
+    {
+      "name": "calvizie-pagine",
+      "source": "./plugins/calvizie-pagine",
+      "description": "Progetta landing e pagine partner di calvizie.net: HTML e CSS che il plugin Pagine Calvizie accetta senza ritocchi, scheda di consegna compilata e guida per pubblicare.",
+      "version": "1.0.0"
+    }
+  ]
+}

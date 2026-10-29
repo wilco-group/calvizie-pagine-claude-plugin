@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Landing "Landing Esempio" (esempio inventato).
+     Da incollare nel riquadro "HTML della pagina", template "Landing (Pagine Calvizie)".
+     Il CSS è qui sotto: il riquadro "CSS della pagina" resta vuoto.
+     Foto: sostituire https://calvizie.net/wp-content/uploads/FOTO/ con la cartella della Libreria media. -->
+<title>Consulenza tricologica gratuita | Calvizie.net</title>
+<meta name="description" content="Prenota una consulenza gratuita sulla caduta dei capelli: ti ricontattiamo entro due giorni lavorativi per capire insieme da dove partire.">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:title" content="Consulenza tricologica gratuita | Calvizie.net">
+<meta property="og:description" content="Ti ricontattiamo entro due giorni lavorativi per capire insieme da dove partire.">
+<meta property="og:image" content="https://calvizie.net/wp-content/uploads/FOTO/landing-esempio-apertura.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+.landing-esempio-page {
+  --blu: #1f4497;
+  --blu-scuro: #0d0b52;
+  --blu-chiaro: #eef2fb;
+  --arancio: #f7911e;
+  --arancio-scuro: #e07f0d;
+  --testo: #2b3240;
+  --grigio: #5b6472;
+  --bordo: #e4e8f0;
+  --sfondo: #f5f7fb;
+  --raggio: 14px;
+  font-family: 'Oxygen', system-ui, sans-serif;
+  color: var(--testo);
+  line-height: 1.6;
+  font-size: 17px;
+  background: #ffffff;
+}
+.landing-esempio-page,
+.landing-esempio-page * { margin: 0; padding: 0; box-sizing: border-box; }
+.landing-esempio-page h1,
+.landing-esempio-page h2,
+.landing-esempio-page h3 { font-family: 'Roboto', sans-serif; color: var(--blu-scuro); line-height: 1.15; }
+.landing-esempio-page h1 { font-size: clamp(2rem, 4.2vw, 3rem); font-weight: 900; }
+.landing-esempio-page h2 { font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 700; }
+.landing-esempio-page h3 { font-size: 1.15rem; font-weight: 700; margin-top: 10px; }
+.landing-esempio-page p { margin-top: 12px; }
+.landing-esempio-page a { color: var(--blu); }
+.landing-esempio-page img { max-width: 100%; height: auto; display: block; }
+.landing-esempio-page :focus-visible { outline: 3px solid var(--arancio); outline-offset: 2px; }
+.landing-esempio-page .contenitore { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+
+.landing-esempio-page .testata { border-bottom: 1px solid var(--bordo); padding: 16px 0; }
+.landing-esempio-page .marchio { font: 900 1.3rem 'Roboto', sans-serif; color: var(--blu-scuro); text-decoration: none; }
+
+.landing-esempio-page .apertura { background: linear-gradient(160deg, var(--blu-chiaro) 0%, #ffffff 70%); padding: 48px 0 56px; }
+.landing-esempio-page .apertura-griglia { display: grid; grid-template-columns: 1fr 1fr; gap: 44px; align-items: start; }
+.landing-esempio-page .lead { font-size: 1.1rem; }
+.landing-esempio-page .punti { list-style: none; margin-top: 18px; }
+.landing-esempio-page .punti li { padding-left: 26px; position: relative; margin-top: 6px; }
+.landing-esempio-page .punti li::before { content: "✓"; position: absolute; left: 0; color: var(--blu); font-weight: 700; }
+.landing-esempio-page .foto { border-radius: var(--raggio); margin-top: 24px; }
+
+.landing-esempio-page .modulo { background: #ffffff; border: 1px solid var(--bordo); border-radius: var(--raggio); padding: 28px; box-shadow: 0 8px 28px rgba(31, 68, 151, .12); }
+.landing-esempio-page .modulo h2 { font-size: 1.4rem; }
+.landing-esempio-page .campo { margin-top: 16px; }
+.landing-esempio-page .campo label { display: block; font-weight: 700; font-size: .92rem; margin-bottom: 6px; }
+.landing-esempio-page .campo input,
+.landing-esempio-page .campo select,
+.landing-esempio-page .campo textarea { width: 100%; font: inherit; color: var(--testo); padding: 11px 13px; border: 1px solid var(--bordo); border-radius: 9px; background: #ffffff; }
+.landing-esempio-page .scelte { border: 0; margin-top: 16px; }
+.landing-esempio-page .scelte legend { font-weight: 700; font-size: .92rem; margin-bottom: 6px; }
+.landing-esempio-page .scelte label { display: inline-flex; gap: 6px; align-items: center; margin-right: 18px; }
+.landing-esempio-page .consenso { display: flex; gap: 10px; align-items: flex-start; font-size: .9rem; margin-top: 14px; }
+.landing-esempio-page .consenso input { margin-top: 4px; flex: 0 0 auto; }
+.landing-esempio-page .pulsante { display: block; width: 100%; margin-top: 20px; border: 0; border-radius: 9px; background: var(--arancio); color: var(--blu-scuro); font: 700 1.05rem 'Roboto', sans-serif; padding: 15px 24px; cursor: pointer; }
+.landing-esempio-page .pulsante:hover { background: var(--arancio-scuro); }
+.landing-esempio-page .cp-form-sospeso { background: var(--blu-chiaro); border: 1px solid var(--bordo); border-radius: var(--raggio); padding: 24px; font-weight: 700; color: var(--blu-scuro); }
+
+.landing-esempio-page .sezione { padding: 56px 0; }
+.landing-esempio-page .schede { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 28px; }
+.landing-esempio-page .scheda { background: var(--sfondo); border-radius: var(--raggio); padding: 24px; }
+
+.landing-esempio-page .piede { background: var(--blu-scuro); color: #ffffff; padding: 24px 0; font-size: .9rem; }
+.landing-esempio-page .piede a { color: #ffffff; }
+
+.landing-esempio-page .todo { background: #fff3cd; color: #7a5a00; border-radius: 4px; padding: 0 4px; font-weight: 700; }
+
+@media (max-width: 760px) {
+  .landing-esempio-page .apertura-griglia,
+  .landing-esempio-page .schede { grid-template-columns: 1fr; gap: 24px; }
+  .landing-esempio-page .apertura { padding: 32px 0 40px; }
+  .landing-esempio-page .modulo { padding: 20px; }
+}
+</style>
+</head>
+<body>
+<main class="landing-esempio-page">
+
+  <header class="testata">
+    <div class="contenitore"><a class="marchio" href="https://calvizie.net/">Calvizie.net</a></div>
+  </header>
+
+  <section class="apertura">
+    <div class="contenitore apertura-griglia">
+      <div>
+        <h1>Perdi capelli? Parliamone, senza impegno</h1>
+        <p class="lead">Lasciaci i tuoi contatti: ti richiamiamo entro due giorni lavorativi per capire insieme da dove partire e a chi rivolgerti.</p>
+        <ul class="punti">
+          <li>Consulenza gratuita e senza impegno</li>
+          <li>Ti ricontattiamo entro due giorni lavorativi</li>
+          <li>I tuoi dati restano riservati</li>
+        </ul>
+        <img class="foto" src="https://calvizie.net/wp-content/uploads/FOTO/landing-esempio-apertura.jpg" alt="Una consulente parla con una persona" width="640" height="420">
+      </div>
+
+      <form data-lead-form class="modulo">
+        <h2>Richiedi la consulenza</h2>
+        <div class="campo">
+          <label for="le-nome">Nome e cognome *</label>
+          <input id="le-nome" name="nome" type="text" autocomplete="name" required>
+        </div>
+        <div class="campo">
+          <label for="le-email">Email *</label>
+          <input id="le-email" name="email" type="email" autocomplete="email" required>
+        </div>
+        <div class="campo">
+          <label for="le-telefono">Telefono *</label>
+          <input id="le-telefono" name="telefono" type="tel" autocomplete="tel" required>
+        </div>
+        <fieldset class="scelte">
+          <legend>Da quanto tempo noti la caduta? *</legend>
+          <label><input type="radio" name="da_quanto_tempo" value="Meno di 6 mesi" required> Meno di 6 mesi</label>
+          <label><input type="radio" name="da_quanto_tempo" value="Più di 6 mesi"> Più di 6 mesi</label>
+        </fieldset>
+        <div class="campo">
+          <label for="le-messaggio">Vuoi aggiungere qualcosa?</label>
+          <textarea id="le-messaggio" name="messaggio" rows="3"></textarea>
+        </div>
+        <label class="consenso"><input type="checkbox" name="privacy" required>
+          Ho letto l'<a href="https://calvizie.net/informativa-privacy-clienti/" target="_blank" rel="noopener">informativa privacy</a> e acconsento al trattamento dei miei dati per essere ricontattato. *</label>
+        <label class="consenso"><input type="checkbox" name="consenso_marketing">
+          Voglio ricevere la newsletter di Calvizie.net (facoltativo).</label>
+        <button type="submit" class="pulsante">Voglio essere ricontattato</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="sezione">
+    <div class="contenitore">
+      <h2>Come funziona</h2>
+      <div class="schede">
+        <div class="scheda"><h3>1. Compili il modulo</h3><p>Bastano un minuto e pochi dati.</p></div>
+        <div class="scheda"><h3>2. Ti richiamiamo</h3><p>Entro due giorni lavorativi, nell'orario che preferisci.</p></div>
+        <div class="scheda"><h3>3. Decidi tu</h3><p>Ti spieghiamo le possibilità; nessun obbligo.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="piede">
+    <div class="contenitore">
+      <p>© Calvizie.net · <a href="https://calvizie.net/informativa-privacy-clienti/" target="_blank" rel="noopener">Informativa privacy</a></p>
+    </div>
+  </footer>
+
+</main>
+</body>
+</html>

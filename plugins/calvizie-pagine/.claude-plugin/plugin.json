@@ -1,0 +1,10 @@
+{
+  "name": "calvizie-pagine",
+  "version": "1.0.0",
+  "description": "Progetta landing e pagine partner di calvizie.net: HTML e CSS che il plugin WordPress Pagine Calvizie accetta senza ritocchi, con scheda di consegna compilata e guida passo passo per pubblicare.",
+  "author": {
+    "name": "Wilco Group"
+  },
+  "repository": "https://github.com/wilco-group/calvizie-pagine-claude-plugin",
+  "keywords": ["calvizie.net", "wordpress", "landing", "pagina partner"]
+}

@@ -1,0 +1,95 @@
+/* Pagina partner "Farmacia Esempio" (esempio inventato).
+   Da incollare nel riquadro "CSS della pagina".
+   Ogni selettore inizia con .farmacia-esempio-page: non tocca il resto del sito.
+   Font Roboto (titoli) e Oxygen (testo): già caricati dal sito. */
+
+.farmacia-esempio-page {
+  --blu: #1f4497;
+  --blu-scuro: #0d0b52;
+  --blu-chiaro: #eef2fb;
+  --arancio: #f7911e;
+  --arancio-scuro: #e07f0d;
+  --testo: #2b3240;
+  --grigio: #5b6472;
+  --bordo: #e4e8f0;
+  --sfondo: #f5f7fb;
+  --raggio: 14px;
+  font-family: 'Oxygen', system-ui, sans-serif;
+  color: var(--testo);
+  line-height: 1.6;
+  font-size: 17px;
+}
+.farmacia-esempio-page,
+.farmacia-esempio-page * { margin: 0; padding: 0; box-sizing: border-box; }
+.farmacia-esempio-page h1,
+.farmacia-esempio-page h2,
+.farmacia-esempio-page h3 { font-family: 'Roboto', sans-serif; color: var(--blu-scuro); line-height: 1.15; }
+.farmacia-esempio-page h1 { font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 900; margin-top: 10px; }
+.farmacia-esempio-page h2 { font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 700; margin-top: 6px; }
+.farmacia-esempio-page h3 { font-size: 1.15rem; font-weight: 700; margin-top: 10px; }
+.farmacia-esempio-page p { margin-top: 12px; }
+.farmacia-esempio-page a { color: var(--blu); }
+.farmacia-esempio-page img { max-width: 100%; height: auto; display: block; }
+.farmacia-esempio-page :focus-visible { outline: 3px solid var(--arancio); outline-offset: 2px; }
+
+.farmacia-esempio-page .contenitore { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+.farmacia-esempio-page .contenitore.stretto { max-width: 760px; }
+.farmacia-esempio-page .sezione { padding: 56px 0; }
+.farmacia-esempio-page .sezione.chiara { background: var(--sfondo); }
+.farmacia-esempio-page .occhiello { font-size: .78rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--arancio-scuro); margin-top: 0; }
+.farmacia-esempio-page .intro { color: var(--grigio); }
+
+/* Apertura */
+.farmacia-esempio-page .apertura { background: linear-gradient(160deg, var(--blu-chiaro) 0%, #ffffff 70%); border-bottom: 1px solid var(--bordo); padding: 48px 0 56px; }
+.farmacia-esempio-page .apertura-griglia { display: grid; grid-template-columns: 1.1fr .9fr; gap: 44px; align-items: center; }
+.farmacia-esempio-page .logo { width: 180px; margin-bottom: 18px; }
+.farmacia-esempio-page .evidenza { background: linear-gradient(transparent 62%, rgba(247, 145, 30, .32) 62%); }
+.farmacia-esempio-page .lead { font-size: 1.08rem; max-width: 560px; }
+.farmacia-esempio-page .punti { list-style: none; margin-top: 18px; }
+.farmacia-esempio-page .punti li { padding-left: 26px; position: relative; margin-top: 6px; }
+.farmacia-esempio-page .punti li::before { content: "✓"; position: absolute; left: 0; color: var(--blu); font-weight: 700; }
+.farmacia-esempio-page .foto { border-radius: var(--raggio); box-shadow: 0 8px 28px rgba(31, 68, 151, .12); }
+
+/* Pulsanti */
+.farmacia-esempio-page .pulsanti { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
+.farmacia-esempio-page .pulsante { display: inline-flex; align-items: center; justify-content: center; border-radius: 9px; font: 700 1rem 'Roboto', sans-serif; padding: 14px 24px; text-decoration: none; cursor: pointer; border: 2px solid transparent; }
+.farmacia-esempio-page .pulsante-pieno { background: var(--arancio); color: var(--blu-scuro); }
+.farmacia-esempio-page .pulsante-pieno:hover { background: var(--arancio-scuro); }
+.farmacia-esempio-page .pulsante-linea { border-color: var(--blu); color: var(--blu); background: #ffffff; }
+.farmacia-esempio-page .pulsante-linea:hover { background: var(--blu-chiaro); }
+
+/* Schede */
+.farmacia-esempio-page .schede { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 28px; }
+.farmacia-esempio-page .scheda { background: #ffffff; border: 1px solid var(--bordo); border-radius: var(--raggio); padding: 24px; }
+.farmacia-esempio-page .numero { display: inline-flex; width: 36px; height: 36px; align-items: center; justify-content: center; border-radius: 50%; background: var(--blu); color: #ffffff; font-weight: 700; }
+
+/* Domande frequenti */
+.farmacia-esempio-page .due-colonne { display: grid; grid-template-columns: 1fr 1fr; gap: 44px; align-items: center; }
+.farmacia-esempio-page details { border-bottom: 1px solid var(--bordo); padding: 14px 0; }
+.farmacia-esempio-page details:first-of-type { margin-top: 18px; }
+.farmacia-esempio-page summary { cursor: pointer; font-weight: 700; color: var(--blu-scuro); }
+
+/* Modulo */
+.farmacia-esempio-page .modulo { margin-top: 24px; background: #ffffff; border: 1px solid var(--bordo); border-radius: var(--raggio); padding: 28px; }
+.farmacia-esempio-page .riga { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.farmacia-esempio-page .campo { margin-bottom: 16px; }
+.farmacia-esempio-page .campo label { display: block; font-weight: 700; font-size: .92rem; margin-bottom: 6px; }
+.farmacia-esempio-page .campo input,
+.farmacia-esempio-page .campo select,
+.farmacia-esempio-page .campo textarea { width: 100%; font: inherit; color: var(--testo); padding: 11px 13px; border: 1px solid var(--bordo); border-radius: 9px; background: #ffffff; }
+.farmacia-esempio-page .consenso { display: flex; gap: 10px; align-items: flex-start; font-size: .9rem; margin-bottom: 12px; }
+.farmacia-esempio-page .consenso input { margin-top: 4px; flex: 0 0 auto; }
+.farmacia-esempio-page .modulo .pulsante { margin-top: 8px; width: 100%; }
+.farmacia-esempio-page .cp-form-sospeso { margin-top: 24px; background: var(--blu-chiaro); border: 1px solid var(--bordo); border-radius: var(--raggio); padding: 20px; font-weight: 700; color: var(--blu-scuro); }
+
+/* Parti da completare (classe todo): ben visibili finché ci sono */
+.farmacia-esempio-page .todo { background: #fff3cd; color: #7a5a00; border-radius: 4px; padding: 0 4px; font-weight: 700; }
+
+@media (max-width: 760px) {
+  .farmacia-esempio-page .apertura-griglia,
+  .farmacia-esempio-page .due-colonne,
+  .farmacia-esempio-page .schede,
+  .farmacia-esempio-page .riga { grid-template-columns: 1fr; gap: 20px; }
+  .farmacia-esempio-page .sezione { padding: 40px 0; }
+  .farmacia-esempio-page .modulo { padding: 20px; }
+}
