@@ -53,8 +53,9 @@ Riquadro **Form della landing/pagina** (colonna di destra). Se la pagina non ha 
 
 1. **Foglio Google o URL /exec:** incolla l'indirizzo del foglio Google indicato nella scheda (quello che vedi nella barra del browser quando il foglio è aperto) oppure l'URL `/exec` della Web App.
 2. Se usi un foglio Google, condividilo come **Editor** con l'indirizzo che il riquadro mostra sotto il campo ("Condividi il foglio con questo indirizzo come Editor"). Nel foglio: pulsante **Condividi**, incolla quell'indirizzo, ruolo **Editor**, togli la spunta "Invia notifica", **Condividi**.
+   Se al posto dell'indirizzo il riquadro dice "Account di servizio non ancora configurato.", il collegamento ai fogli Google non è ancora pronto: chiedi all'amministratore del sito prima di attivare il modulo.
 3. **Email di riserva:** l'indirizzo della scheda. Riceve i contatti se il foglio non risponde.
-4. **Stato del form:** quello della scheda ("Stato del modulo al lancio").
+4. **Stato del form:** quello della scheda ("Stato del modulo al lancio"). Una pagina nuova parte sempre su **Sospeso**: per accendere il modulo seleziona **Attivo** e poi clicca **Salva bozza** (o **Aggiorna**, se la pagina è già pubblicata).
    - **Sospeso:** al posto del modulo i visitatori vedono il messaggio.
    - **Attivo:** il modulo invia. Resta attivo solo se foglio ed email di riserva sono compilati, altrimenti WordPress lo rimette su Sospeso e te lo segnala.
 5. **Messaggio quando è sospeso:** lascia quello predefinito o scrivi quello della scheda.
@@ -80,11 +81,12 @@ Da quel momento la pagina partner si vede all'indirizzo della categoria: in alto
 
 1. Clicca **Salva bozza**, poi **Anteprima**.
 2. Se in fondo allo schermo c'è una **barra rossa** ("Solo per gli amministratori"), la pagina ha qualcosa da sistemare: la barra lo dice in italiano. I casi più comuni:
-   - "immagini senza un indirizzo assoluto https://" → sono rimasti degli indirizzi `FOTO/`: rifai il passo 3;
-   - "segnaposto da completare (classe todo)" → manca un testo: chiedi a Claude di completarlo o di toglierlo;
+   - "Ci sono immagini senza un indirizzo definitivo" → sono rimasti degli indirizzi provvisori `https://calvizie.net/wp-content/uploads/FOTO/` (o una foto senza https://): rifai il passo 3;
+   - "è rimasto un segnaposto da completare (elemento con classe \"todo\")" → manca un testo: chiedi a Claude di completarlo o di toglierlo;
    - "Mancano il titolo SEO o la descrizione SEO" → passo 7;
-   - "deve avere una categoria" → passo 8;
-   - "il foglio Google non è condiviso" → passo 6, punto 2;
+   - "Una pagina partner deve avere una categoria" → passo 8;
+   - "Il foglio Google di destinazione non è condiviso con l'account di servizio" → passo 6, punto 2;
+   - "Il modulo è attivo ma mancano la destinazione dei contatti o l'email di riserva" → passo 6, punti 1 e 3;
    - per tutto il resto: copia il testo della barra a Claude e chiedi di correggere i file.
 3. Correggi, salva, riapri l'anteprima. La barra la vedono solo gli amministratori: pubblica solo quando è sparita.
 4. Guarda la pagina anche dal telefono (o restringendo la finestra): testi leggibili, foto al loro posto, modulo usabile.

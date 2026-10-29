@@ -56,6 +56,8 @@ Per controllare un esempio con le stesse regole del plugin, dal repository WordP
 php bin/check-html.php <file.html> [file.css] --type=partner   # oppure --type=landing
 ```
 
+Gli esempi usano l'indirizzo provvisorio `https://calvizie.net/wp-content/uploads/FOTO/`, che la regola R02 segnala di proposito finché non viene sostituito con la cartella vera della Libreria media: per controllarli, sostituiscilo prima con una cartella qualsiasi (per esempio `https://calvizie.net/wp-content/uploads/2026/11/`).
+
 Ricorda di aggiornare `version` in `plugins/calvizie-pagine/.claude-plugin/plugin.json` (e in `marketplace.json`) a ogni modifica delle skill.
 
 Il repository è pubblico: niente chiavi, indirizzi di fogli o Web App, email interne, nomi di persone o contenuti dei clienti.

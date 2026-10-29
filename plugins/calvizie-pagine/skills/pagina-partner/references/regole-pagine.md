@@ -12,9 +12,11 @@ Sbagliato: `<img src="data:image/png;base64,iVBORw0KGgo...">`
 ## R02
 Ogni `<img src>` deve essere un indirizzo assoluto che inizia con `https://`. Il segnaposto `__URL_FOTO__` e i percorsi relativi vengono segnalati.
 
+Viene segnalato anche l'indirizzo provvisorio `https://calvizie.net/wp-content/uploads/FOTO/` usato nelle consegne (in `<img src>`, `srcset`, nei `<meta>` come `og:image` e negli `url()` del CSS): dopo aver caricato le foto nella Libreria media va sostituito con l'indirizzo vero della loro cartella. Nei commenti HTML e CSS non conta.
+
 Corretto: `<img src="https://calvizie.net/wp-content/uploads/2026/10/foto.jpg" alt="">`
 
-Sbagliato: `<img src="__URL_FOTO__" alt="">` oppure `<img src="/img/foto.jpg" alt="">`
+Sbagliato: `<img src="__URL_FOTO__" alt="">`, `<img src="/img/foto.jpg" alt="">` oppure `<img src="https://calvizie.net/wp-content/uploads/FOTO/foto.jpg" alt="">`
 
 ## R03
 Nessun elemento con classe `todo`: è il segnaposto per le parti ancora da completare.
