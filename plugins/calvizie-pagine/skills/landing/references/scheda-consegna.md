@@ -43,7 +43,7 @@ Copia il modello qui sotto e compilalo.
 - Campi del modulo (diventano le colonne del foglio): <nome, email, telefono, messaggio, privacy, ...>
 - Campi obbligatori: <...>
 - Consensi: <privacy obbligatorio; consenso_<nome> obbligatorio/facoltativo, con il testo della casella>
-- Destinazione dei contatti: <foglio Google da usare (nome del foglio e chi lo crea/condivide) | URL /exec di una Web App | DA DECIDERE: chi decide>
+- Destinazione dei contatti: <foglio Google da usare (nome del foglio e chi lo crea/condivide) | DA DECIDERE: chi decide>
 - Email di riserva (riceve i contatti se il foglio non risponde): <indirizzo email | DA DECIDERE: chi decide>
 - Stato del modulo al lancio: <attivo | sospeso>
 - Chi dà il via per attivarlo: <persona o ruolo, oppure "nessuno: attivo da subito">

@@ -68,11 +68,11 @@ Corretto: modulo attivo con destinazione e email di riserva compilate.
 Sbagliato: modulo attivo con la destinazione vuota.
 
 ## R10
-Il foglio Google di destinazione deve essere condiviso come Editor con l'account di servizio del plugin, altrimenti i contatti non vi arrivano.
+Il foglio Google di destinazione deve essere condiviso con l'account di servizio del plugin con il ruolo **Editor**. Se non è condiviso i contatti non vi arrivano. Attenzione: con il ruolo **Visualizzatore** (Viewer) il controllo passa e la barra rossa non compare, ma il plugin non riesce a scrivere: ogni contatto arriva solo all'email di riserva e parte un'allerta.
 
-Corretto: foglio condiviso con l'account di servizio.
+Corretto: foglio condiviso con l'account di servizio come Editor.
 
-Sbagliato: foglio privato, non condiviso.
+Sbagliato: foglio privato, non condiviso, oppure condiviso solo come Visualizzatore.
 
 ## R11
 Titolo SEO e descrizione SEO non devono essere vuoti. Per le pagine partner si compilano nei campi della pagina; per le landing con documento completo si leggono da `<title>` e `<meta name="description">` (per un frammento la regola non si applica).

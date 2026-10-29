@@ -51,8 +51,9 @@ Fallo **prima** di incollare l'HTML: così incolli una volta sola il testo già 
 
 Riquadro **Form della landing/pagina** (colonna di destra). Se la pagina non ha un modulo, salta questo passaggio.
 
-1. **Foglio Google o URL /exec:** incolla l'indirizzo del foglio Google indicato nella scheda (quello che vedi nella barra del browser quando il foglio è aperto) oppure l'URL `/exec` della Web App.
-2. Se usi un foglio Google, condividilo come **Editor** con l'indirizzo che il riquadro mostra sotto il campo ("Condividi il foglio con questo indirizzo come Editor"). Nel foglio: pulsante **Condividi**, incolla quell'indirizzo, ruolo **Editor**, togli la spunta "Invia notifica", **Condividi**.
+1. **Foglio Google o URL /exec:** incolla l'indirizzo del foglio Google indicato nella scheda (quello che vedi nella barra del browser quando il foglio è aperto). Per le pagine nuove usa sempre il link del foglio Google: gli indirizzi `/exec` sono del vecchio sistema e li imposta solo uno sviluppatore.
+2. Condividi il foglio come **Editor** con l'indirizzo che il riquadro mostra sotto il campo ("Condividi il foglio con questo indirizzo come Editor"). Nel foglio: pulsante **Condividi**, incolla quell'indirizzo, ruolo **Editor**, togli la spunta "Invia notifica", **Condividi**.
+   Il ruolo deve essere proprio **Editor**: con **Visualizzatore** la barra rossa non dice nulla, ma i contatti non si scrivono nel foglio e arrivano solo all'email di riserva.
    Se al posto dell'indirizzo il riquadro dice "Account di servizio non ancora configurato.", il collegamento ai fogli Google non è ancora pronto: chiedi all'amministratore del sito prima di attivare il modulo.
 3. **Email di riserva:** l'indirizzo della scheda. Riceve i contatti se il foglio non risponde.
 4. **Stato del form:** quello della scheda ("Stato del modulo al lancio"). Una pagina nuova parte sempre su **Sospeso**: per accendere il modulo seleziona **Attivo** e poi clicca **Salva bozza** (o **Aggiorna**, se la pagina è già pubblicata).
@@ -75,7 +76,7 @@ Le colonne del foglio si creano da sole al primo contatto: Data, Pagina, i campi
 1. Se la categoria non esiste ancora: menu **Articoli > Categorie**, scrivi nome e slug della scheda, scegli la categoria madre indicata, **Aggiungi nuova categoria**. Poi torna alla pagina.
 2. Nel riquadro **Categoria collegata** scegli la categoria.
 
-Da quel momento la pagina partner si vede all'indirizzo della categoria: in alto il contenuto della pagina, sotto gli articoli della categoria. Chi apre l'indirizzo della pagina viene mandato lì automaticamente.
+Da quel momento la pagina partner si vede all'indirizzo della categoria: in alto il contenuto della pagina, sotto gli articoli della categoria. La griglia degli articoli ha già il suo stile (riquadri con foto, titolo ed estratto, pagine numerate): non serve fare nulla. Chi apre l'indirizzo della pagina viene mandato lì automaticamente.
 
 ## 9. Anteprima e barra rossa
 
@@ -87,8 +88,9 @@ Da quel momento la pagina partner si vede all'indirizzo della categoria: in alto
    - "Una pagina partner deve avere una categoria" → passo 8;
    - "Il foglio Google di destinazione non è condiviso con l'account di servizio" → passo 6, punto 2;
    - "Il modulo è attivo ma mancano la destinazione dei contatti o l'email di riserva" → passo 6, punti 1 e 3;
+   - "reCAPTCHA non configurato: il form non è protetto dallo spam." → non dipende dalla pagina: chiedi all'amministratore del sito prima di pubblicare;
    - per tutto il resto: copia il testo della barra a Claude e chiedi di correggere i file.
-3. Correggi, salva, riapri l'anteprima. La barra la vedono solo gli amministratori: pubblica solo quando è sparita.
+3. Correggi, salva, riapri l'anteprima. La barra la vedono solo gli amministratori: non pubblicare finché la barra rossa non è sparita.
 4. Guarda la pagina anche dal telefono (o restringendo la finestra): testi leggibili, foto al loro posto, modulo usabile.
 
 ## 10. Pubblica
@@ -100,5 +102,7 @@ Da quel momento la pagina partner si vede all'indirizzo della categoria: in alto
 
 ## Modifiche dopo la pubblicazione
 
-- Testi o grafica: chiedi a Claude i file aggiornati, rifai i passi 3-5 solo per le parti cambiate (le foto già caricate restano), poi **Aggiorna**.
-- Sospendere il modulo: riquadro **Form della landing/pagina**, **Sospeso**, **Aggiorna**. Per riattivarlo: **Attivo**, **Aggiorna**.
+Su una pagina già pubblicata le modifiche ai riquadri **HTML della pagina**, **CSS della pagina** e **Form della landing/pagina** vanno online appena clicchi **Aggiorna**: l'**Anteprima** non le mostra prima. Tieni da parte i file della versione precedente e controlla la pagina subito dopo aver aggiornato (in una finestra anonima, anche dal telefono); se qualcosa non va, rincolla la versione precedente e **Aggiorna**.
+
+- Testi o grafica: chiedi a Claude i file aggiornati, rifai i passi 3-5 solo per le parti cambiate (le foto già caricate restano), poi **Aggiorna** e controlla subito la pagina.
+- Sospendere il modulo: riquadro **Form della landing/pagina**, **Sospeso**, **Aggiorna**. Per riattivarlo: **Attivo**, **Aggiorna**. Controlla subito dopo che sulla pagina compaia il messaggio (o il modulo).

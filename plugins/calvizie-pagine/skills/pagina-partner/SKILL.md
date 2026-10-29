@@ -50,7 +50,7 @@ Regole:
 - **Niente `<!DOCTYPE>`, `<html>`, `<head>`, `<body>`, `<title>`, `<meta>`, `<link>`, `<style>`, `<script>`.** Titolo e descrizione SEO vanno nella scheda (si compilano in Rank Math); il CSS va nel file CSS.
 - **Tutto dentro un solo `<main class="<x>-page">`**: fuori dal `<main>` non c'è nient'altro (solo commenti HTML, se servono). `<x>` è il nome breve del partner: minuscole, cifre e trattini (esempio: `farmacia-esempio-page`). Scegli un nome che non possa coincidere con le classi del tema (niente `td-`, `tdb-`, `page`, `main`).
 - Un solo `<h1>` (il titolo della pagina): il tema non stampa il titolo da solo.
-- **Non disegnare la griglia degli articoli**: la aggiunge WordPress sotto il contenuto. Al massimo un titolo di sezione in fondo, del tipo "Gli articoli su <partner>", se il brief lo chiede.
+- **Non disegnare la griglia degli articoli**: la aggiunge WordPress sotto il contenuto, già con il suo stile (riquadri con foto, titolo, estratto e pagine numerate). Non scrivere CSS per `.cp-articoli`. Al massimo un titolo di sezione in fondo, del tipo "Gli articoli su <partner>", se il brief lo chiede.
 - Niente menu, intestazione o piè di pagina propri: ci sono quelli del sito.
 - **Niente script.** Per aprire/chiudere (per esempio le domande frequenti) usa `<details><summary>`.
 - **Niente immagini incorporate** (`data:image`, base64), né nell'HTML né nel CSS. Le icone semplici si fanno con caratteri (✓, →) o con SVG scritto direttamente nell'HTML.
@@ -128,7 +128,7 @@ Regole dei campi:
 
 ## Parti da completare e sezioni nascoste
 
-- **Da completare:** un testo che manca va in un elemento con classe `todo`, per esempio `<span class="todo">orari di apertura</span>`, con uno stile giallo ben visibile (`.<x>-page .todo { background:#fff3cd; }`). Il plugin blocca la pubblicazione finché ce n'è uno: elenca ogni `todo` nella scheda, con chi deve fornire il testo.
+- **Da completare:** un testo che manca va in un elemento con classe `todo`, per esempio `<span class="todo">orari di apertura</span>`, con uno stile giallo ben visibile (`.<x>-page .todo { background:#fff3cd; }`). Il plugin lo segnala nella barra rossa dell'anteprima: avvisa la persona di non pubblicare finché la barra rossa lo mostra, ed elenca ogni `todo` nella scheda, con chi deve fornire il testo.
 - **Sezioni pronte ma da tenere nascoste** al lancio (per esempio un'intervista non ancora approvata): mettile in un commento HTML con una riga che spiega quando attivarle:
 
 ```html

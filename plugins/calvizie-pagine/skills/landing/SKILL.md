@@ -133,7 +133,7 @@ Regole dei campi:
 
 ## Parti da completare e sezioni nascoste
 
-- **Da completare:** un testo che manca va in un elemento con classe `todo`, per esempio `<span class="todo">orari di apertura</span>`, con uno stile giallo ben visibile (`.<x>-page .todo { background:#fff3cd; }`). Il plugin blocca la pubblicazione finché ce n'è uno: elenca ogni `todo` nella scheda, con chi deve fornire il testo.
+- **Da completare:** un testo che manca va in un elemento con classe `todo`, per esempio `<span class="todo">orari di apertura</span>`, con uno stile giallo ben visibile (`.<x>-page .todo { background:#fff3cd; }`). Il plugin lo segnala nella barra rossa dell'anteprima: avvisa la persona di non pubblicare finché la barra rossa lo mostra, ed elenca ogni `todo` nella scheda, con chi deve fornire il testo.
 - **Sezioni pronte ma da tenere nascoste** al lancio (per esempio un video non ancora approvato): mettile in un commento HTML con una riga che spiega quando attivarle:
 
 ```html
