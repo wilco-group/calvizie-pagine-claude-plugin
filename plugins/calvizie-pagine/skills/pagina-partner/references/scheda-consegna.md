@@ -42,6 +42,7 @@ Copia il modello qui sotto e compilalo.
 - Il modulo c'è? <sì | no>
 - Campi del modulo (diventano le colonne del foglio): <nome, email, telefono, messaggio, privacy, ...>
 - Campi obbligatori: <...>
+- Intestazioni già presenti nel foglio, se ci sono: <es. "Data e ora", "Nome e cognome", ...> (altrimenti il plugin le crea da solo)
 - Consensi: <privacy obbligatorio; consenso_<nome> obbligatorio/facoltativo, con il testo della casella>
 - Destinazione dei contatti: <foglio Google da usare (nome del foglio e chi lo crea/condivide) | DA DECIDERE: chi decide>
 - Email di riserva (riceve i contatti se il foglio non risponde): <indirizzo email | DA DECIDERE: chi decide>

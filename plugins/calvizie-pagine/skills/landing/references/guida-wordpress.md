@@ -61,7 +61,7 @@ Riquadro **Form della landing/pagina** (colonna di destra). Se la pagina non ha 
    - **Attivo:** il modulo invia. Resta attivo solo se foglio ed email di riserva sono compilati, altrimenti WordPress lo rimette su Sospeso e te lo segnala.
 5. **Messaggio quando è sospeso:** lascia quello predefinito o scrivi quello della scheda.
 
-Le colonne del foglio si creano da sole al primo contatto: Data, Pagina, i campi del modulo, i parametri delle campagne e l'URL.
+Le colonne del foglio si creano da sole al primo contatto: Data, Pagina, i campi del modulo, i parametri delle campagne e l'URL. Se il foglio ha già le sue intestazioni, il modulo deve indicarle con `data-colonna` (vedi le regole dei campi): le colonne che non trova le aggiunge in fondo.
 
 ## 7. SEO
 
