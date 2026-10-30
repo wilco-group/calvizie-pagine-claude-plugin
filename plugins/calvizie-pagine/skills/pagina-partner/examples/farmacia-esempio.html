@@ -5,44 +5,54 @@
 
 <main class="farmacia-esempio-page">
 
-  <section class="apertura">
-    <div class="contenitore apertura-griglia">
+  <section class="hero">
+    <div class="hero-in">
       <div>
-        <img class="logo" src="https://calvizie.net/wp-content/uploads/FOTO/farmacia-esempio-logo.png" alt="Logo della Farmacia Esempio" width="180" height="60">
+        <img class="logo" src="https://calvizie.net/wp-content/uploads/FOTO/farmacia-esempio-logo.png" alt="Logo della Farmacia Esempio" width="72" height="72">
         <p class="occhiello">Partner di Calvizie.net</p>
-        <h1>Farmacia Esempio: <span class="evidenza">consulenza tricologica in farmacia</span></h1>
+        <h1>Farmacia Esempio: <span class="hl">consulenza tricologica</span> in farmacia</h1>
         <p class="lead">Una farmacia di quartiere con un angolo dedicato alla salute di capelli e cuoio capelluto: ascolto, prodotti scelti con cura e, quando serve, l'indicazione di rivolgersi al medico.</p>
-        <ul class="punti">
-          <li>Farmacisti formati sulla cura dei capelli</li>
-          <li>Prodotti scelti insieme a te</li>
-          <li>Risposta entro due giorni lavorativi</li>
-        </ul>
-        <div class="pulsanti">
-          <a class="pulsante pulsante-pieno" href="#contatti">Chiedi informazioni</a>
-          <a class="pulsante pulsante-linea" href="#come-lavora">Come lavora la farmacia</a>
+        <div class="badges">
+          <span class="badge"><i>✓</i> Farmacisti formati</span>
+          <span class="badge"><i>✓</i> Risposta in due giorni</span>
+          <span class="badge"><i>✓</i> Anche su appuntamento</span>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-arancio" href="#contatti">Chiedi informazioni</a>
+          <a class="btn btn-linea" href="#come-lavora">Come lavora la farmacia</a>
         </div>
       </div>
       <img class="foto" src="https://calvizie.net/wp-content/uploads/FOTO/farmacia-esempio-banco.jpg" alt="Il banco della Farmacia Esempio" width="640" height="480">
     </div>
   </section>
 
+  <section class="cred">
+    <div class="cred-in">
+      <div class="cred-item"><b>Consulenza</b><span>su capelli e cuoio capelluto</span></div>
+      <div class="cred-item"><b>Prodotti da banco</b><span>scelti insieme a te</span></div>
+      <div class="cred-item"><b>Orientamento</b><span>verso il medico, se serve</span></div>
+      <div class="cred-item"><b>Risposta</b><span>entro due giorni lavorativi</span></div>
+    </div>
+  </section>
+
   <section class="sezione" id="come-lavora">
-    <div class="contenitore">
+    <div class="container">
       <p class="occhiello">Come lavora</p>
-      <h2>Tre passi, senza fretta</h2>
-      <div class="schede">
-        <div class="scheda">
-          <span class="numero">1</span>
+      <h2>Tre momenti, senza fretta</h2>
+      <p class="intro">Ogni richiesta parte da una conversazione: prima si capisce la situazione, poi si sceglie cosa fare.</p>
+      <div class="cards">
+        <div class="card">
+          <div class="ico">1</div>
           <h3>Ascolto</h3>
           <p>Racconti cosa noti: da quanto tempo, in che modo, cosa hai già provato.</p>
         </div>
-        <div class="scheda">
-          <span class="numero">2</span>
+        <div class="card">
+          <div class="ico">2</div>
           <h3>Consiglio</h3>
           <p>Il farmacista ti spiega le possibilità e ti propone, se adatti, i prodotti da banco.</p>
         </div>
-        <div class="scheda">
-          <span class="numero">3</span>
+        <div class="card">
+          <div class="ico">3</div>
           <h3>Medico, se serve</h3>
           <p>Se la situazione lo richiede, ti indica di rivolgerti al medico o al dermatologo.</p>
         </div>
@@ -51,11 +61,77 @@
   </section>
 
   <section class="sezione chiara">
-    <div class="contenitore due-colonne">
-      <img class="foto" src="https://calvizie.net/wp-content/uploads/FOTO/farmacia-esempio-consulenza.jpg" alt="Una farmacista durante una consulenza" width="640" height="480">
+    <div class="container profilo">
+      <img class="ritratto" src="https://calvizie.net/wp-content/uploads/FOTO/farmacia-esempio-titolare.jpg" alt="La titolare della Farmacia Esempio" width="400" height="400">
+      <div class="prosa">
+        <p class="occhiello">Chi ti risponde</p>
+        <h2>Dott.ssa Anna Esempio</h2>
+        <p class="ruolo">Farmacista titolare</p>
+        <p>Segue personalmente le richieste sulla cura dei capelli e coordina il lavoro del banco.</p>
+        <p class="citazione">«Prima di consigliare un prodotto, voglio capire bene cosa sta succedendo.»</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEZIONE NASCOSTA: video di presentazione. Da attivare quando il video è approvato: togliere questa riga e la riga "FINE". -->
+  <!-- <section class="sezione"><div class="container"><h2>La farmacia in un minuto</h2><p>Video in arrivo.</p></div></section> -->
+  <!-- FINE SEZIONE NASCOSTA -->
+
+  <section class="sezione" id="contatti">
+    <div class="container richiesta">
       <div>
-        <p class="occhiello">Domande frequenti</p>
-        <h2>Prima di venire in farmacia</h2>
+        <p class="occhiello">Contatti</p>
+        <h2>Chiedi informazioni alla farmacia</h2>
+        <p class="intro">Compila il modulo: la farmacia ti risponde entro due giorni lavorativi.</p>
+        <ol class="passi">
+          <li>Scrivi cosa ti serve, anche in poche righe.</li>
+          <li>La farmacia legge la richiesta e ti ricontatta come preferisci.</li>
+          <li>Se serve, fissate insieme un appuntamento in farmacia.</li>
+        </ol>
+      </div>
+
+      <form data-lead-form class="modulo">
+        <h3>Richiesta di informazioni</h3>
+        <p class="sub">I campi con * sono obbligatori.</p>
+        <div class="campo">
+          <label for="fe-nome">Nome e cognome *</label>
+          <input id="fe-nome" name="nome" type="text" autocomplete="name" required>
+        </div>
+        <div class="campo">
+          <label for="fe-email">Email *</label>
+          <input id="fe-email" name="email" type="email" autocomplete="email" required>
+        </div>
+        <div class="campo">
+          <label for="fe-telefono">Telefono</label>
+          <input id="fe-telefono" name="telefono" type="tel" autocomplete="tel">
+        </div>
+        <fieldset class="campo">
+          <legend>Come preferisci essere ricontattato? *</legend>
+          <div class="scelte">
+            <label><input type="radio" name="canale_preferito" value="Email" required> Email</label>
+            <label><input type="radio" name="canale_preferito" value="Telefono"> Telefono</label>
+          </div>
+        </fieldset>
+        <div class="campo">
+          <label for="fe-messaggio">Messaggio</label>
+          <textarea id="fe-messaggio" name="messaggio" rows="4"></textarea>
+        </div>
+        <label class="consenso"><input type="checkbox" name="privacy" required>
+          <span>Ho letto l'<a href="https://calvizie.net/informativa-privacy-clienti/" target="_blank" rel="noopener">informativa privacy</a> e acconsento al trattamento dei miei dati per essere ricontattato. *</span></label>
+        <label class="consenso"><input type="checkbox" name="consenso_comunicazione_partner" required>
+          <span>Acconsento a che i miei dati siano comunicati alla Farmacia Esempio per rispondere alla richiesta. *</span></label>
+        <label class="consenso"><input type="checkbox" name="consenso_marketing">
+          <span>Voglio ricevere la newsletter di Calvizie.net (facoltativo).</span></label>
+        <button type="submit" class="btn btn-arancio">Invia la richiesta</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="sezione chiara">
+    <div class="container">
+      <p class="occhiello">Domande frequenti</p>
+      <h2>Prima di venire in farmacia</h2>
+      <div class="faq">
         <details>
           <summary>Serve un appuntamento?</summary>
           <p>Non è obbligatorio, ma con un appuntamento il farmacista può dedicarti più tempo.</p>
@@ -68,54 +144,8 @@
     </div>
   </section>
 
-  <!-- SEZIONE NASCOSTA: video di presentazione. Da attivare quando il video è approvato: togliere questa riga e la riga "FINE". -->
-  <!-- <section class="sezione"><div class="contenitore"><h2>La farmacia in un minuto</h2><p>Video in arrivo.</p></div></section> -->
-  <!-- FINE SEZIONE NASCOSTA -->
-
-  <section class="sezione" id="contatti">
-    <div class="contenitore stretto">
-      <p class="occhiello">Contatti</p>
-      <h2>Chiedi informazioni alla farmacia</h2>
-      <p class="intro">Compila il modulo: la farmacia ti risponde entro due giorni lavorativi.</p>
-
-      <form data-lead-form class="modulo">
-        <div class="riga">
-          <div class="campo">
-            <label for="fe-nome">Nome e cognome *</label>
-            <input id="fe-nome" name="nome" type="text" autocomplete="name" required>
-          </div>
-          <div class="campo">
-            <label for="fe-email">Email *</label>
-            <input id="fe-email" name="email" type="email" autocomplete="email" required>
-          </div>
-        </div>
-        <div class="riga">
-          <div class="campo">
-            <label for="fe-telefono">Telefono</label>
-            <input id="fe-telefono" name="telefono" type="tel" autocomplete="tel">
-          </div>
-          <div class="campo">
-            <label for="fe-canale">Come preferisci essere ricontattato? *</label>
-            <select id="fe-canale" name="canale_preferito" required>
-              <option value="">Scegli…</option>
-              <option value="Email">Email</option>
-              <option value="Telefono">Telefono</option>
-            </select>
-          </div>
-        </div>
-        <div class="campo">
-          <label for="fe-messaggio">Messaggio</label>
-          <textarea id="fe-messaggio" name="messaggio" rows="4"></textarea>
-        </div>
-        <label class="consenso"><input type="checkbox" name="privacy" required>
-          Ho letto l'<a href="https://calvizie.net/informativa-privacy-clienti/" target="_blank" rel="noopener">informativa privacy</a> e acconsento al trattamento dei miei dati per essere ricontattato. *</label>
-        <label class="consenso"><input type="checkbox" name="consenso_comunicazione_partner" required>
-          Acconsento a che i miei dati siano comunicati alla Farmacia Esempio per rispondere alla richiesta. *</label>
-        <label class="consenso"><input type="checkbox" name="consenso_marketing">
-          Voglio ricevere la newsletter di Calvizie.net (facoltativo).</label>
-        <button type="submit" class="pulsante pulsante-pieno">Invia la richiesta</button>
-      </form>
-    </div>
-  </section>
+  <div class="container">
+    <p class="avvertenza">Le informazioni di questa pagina non sostituiscono il parere del medico.</p>
+  </div>
 
 </main>

@@ -70,12 +70,16 @@ Regole:
 - **Un solo `<main class="<x>-page">`** che contiene tutto. `<x>` è lo slug o un suo accorciamento: minuscole, cifre e trattini (esempio: `consulenza-gratuita-page`).
 - **CSS tutto in un `<style>` nel `<head>`**, con ogni selettore che inizia con `.<x>-page` (per le landing non è obbligatorio, ma tiene il codice ordinato e riutilizzabile). Il riquadro "CSS della pagina" in WordPress resta vuoto.
 - **Font:** Roboto per i titoli, Oxygen per il testo, caricati con il `<link>` qui sopra (la landing non ha i font del tema).
-- **Colori di partenza** (quelli del sito), da cambiare solo se il brief lo chiede: blu `#1f4497`, blu scuro `#0d0b52`, arancio per i pulsanti `#f7911e` (con testo blu scuro: il bianco sull'arancio non si legge), testo `#2b3240`, sfondo chiaro `#f5f7fb`.
+- **Colori, misure e componenti:** quelli di `references/stile-pagine.md` (vedi "Lo stile" qui sotto). Testo dei pulsanti arancio in blu scuro: il bianco sull'arancio non si legge.
 - La landing non ha menu né piè di pagina del sito: metti tu in alto un'intestazione semplice (il nome "Calvizie.net" in testo o il logo come foto) e in fondo un piè di pagina con il link all'informativa privacy `https://calvizie.net/informativa-privacy-clienti/`.
 - **Niente script**: niente Google Tag Manager, Analytics, pixel, reCAPTCHA, jQuery. Il plugin aggiunge da solo Tag Manager e lo script del modulo. Per aprire/chiudere (per esempio le domande frequenti) usa `<details><summary>`.
 - **Niente immagini incorporate** (`data:image`, base64), né nell'HTML né nel CSS. Le icone semplici si fanno con caratteri (✓, →) o con SVG scritto direttamente nell'HTML.
-- Pagina **responsive**: deve funzionare bene da telefono (almeno un `@media (max-width: 760px)`).
+- Pagina **responsive**: deve funzionare bene da telefono (almeno un `@media (max-width: 900px)`, come in `references/stile-pagine.md`).
 - Accessibilità di base: un solo `<h1>`, titoli in ordine, `alt` su ogni foto, contrasto leggibile, etichette (`<label>`) su ogni campo.
+
+## Lo stile: come le pagine già online
+
+Le pagine nuove devono sembrare della stessa famiglia di quelle già pubblicate su calvizie.net. **Prima di scrivere il CSS leggi `references/stile-pagine.md`** e usa i suoi colori, le misure dei titoli e i componenti (apertura, fascia credenziali, schede, passi numerati, domande frequenti, modulo) così come sono, cambiando solo l'accento del partner e i testi. Struttura e componenti dell'esempio in `examples/` seguono già quello stile. Se il brief chiede qualcosa che lo stile non prevede, costruiscilo con gli stessi colori, raggi e ombre.
 
 ## Foto
 
@@ -156,7 +160,7 @@ Consegna **file da scaricare**, non solo testo nella chat:
 
 Se vuoi far vedere un'anteprima nella chat, fallo a parte: i file da consegnare restano quelli del contratto, con gli indirizzi `FOTO/`.
 
-Esempio completo e corretto: `examples/landing-esempio.html`. Prendilo come riferimento per struttura e modulo, non per i testi.
+Esempio completo e corretto: `examples/landing-esempio.html`. Prendilo come riferimento per struttura, stile e modulo, non per i testi.
 
 ## Prima di consegnare: controllo finale
 

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Copia le regole delle pagine dal repository del plugin WordPress (fonte unica)
-# nelle due skill, e allinea scheda e guida della skill pagina-partner a quelle
+# nelle due skill, e allinea scheda, guida e stile della skill pagina-partner a quelli
 # della skill landing (che fa da originale).
 #
 # Uso:  bin/sync-regole.sh          copia i file
@@ -23,12 +23,14 @@ FROM=(
 	"$SRC"
 	"$SKILLS/landing/references/scheda-consegna.md"
 	"$SKILLS/landing/references/guida-wordpress.md"
+	"$SKILLS/landing/references/stile-pagine.md"
 )
 TO=(
 	"$SKILLS/landing/references/regole-pagine.md"
 	"$SKILLS/pagina-partner/references/regole-pagine.md"
 	"$SKILLS/pagina-partner/references/scheda-consegna.md"
 	"$SKILLS/pagina-partner/references/guida-wordpress.md"
+	"$SKILLS/pagina-partner/references/stile-pagine.md"
 )
 
 status=0

@@ -64,10 +64,14 @@ Consegni un **file CSS separato**, che va nel riquadro "CSS della pagina".
 - Le variabili dei colori si dichiarano su `.<x>-page { --blu: #1f4497; ... }`, non su `:root`.
 - Il tema ha già i suoi stili su titoli, paragrafi, link, campi e pulsanti: **imposta tu** margini, font, dimensioni e colori degli elementi che usi, e azzera i margini (`.<x>-page, .<x>-page * { margin: 0; padding: 0; box-sizing: border-box; }`, poi rimetti gli spazi dove servono).
 - **Font:** Roboto per i titoli, Oxygen per il testo. Sono già caricati dal sito: niente `@import` né `@font-face`.
-- **Colori di partenza** (quelli del sito), da affiancare ai colori del partner se il brief lo chiede: blu `#1f4497`, blu scuro `#0d0b52`, arancio per i pulsanti `#f7911e` (con testo blu scuro: il bianco sull'arancio non si legge), testo `#2b3240`, sfondo chiaro `#f5f7fb`.
-- Contenuto centrato con un contenitore (`.<x>-page .contenitore { max-width: 1120px; margin: 0 auto; padding: 0 20px; }`); gli sfondi delle sezioni possono andare a tutta larghezza. Niente `100vw` né `position: fixed`.
-- Pagina **responsive**: deve funzionare bene da telefono (almeno un `@media (max-width: 760px)`).
+- **Colori, misure e componenti:** quelli di `references/stile-pagine.md` (vedi "Lo stile" qui sotto), con l'accento del partner. Testo dei pulsanti arancio in blu scuro: il bianco sull'arancio non si legge.
+- Contenuto centrato con un contenitore (`.<x>-page .container { max-width: 1120px; margin: 0 auto; padding: 0 20px; }`). Le fasce colorate vanno a tutta larghezza **solo** con la regola `width:100vw; margin-left:calc(50% - 50vw); margin-right:calc(50% - 50vw)` descritta in `references/stile-pagine.md`; nessun altro uso di `100vw`, niente `position: fixed`.
+- Pagina **responsive**: deve funzionare bene da telefono (almeno un `@media (max-width: 900px)`, come in `references/stile-pagine.md`).
 - In testa al file un commento breve: di che pagina è e dove si incolla.
+
+## Lo stile: come le pagine già online
+
+Le pagine nuove devono sembrare della stessa famiglia di quelle già pubblicate su calvizie.net. **Prima di scrivere il CSS leggi `references/stile-pagine.md`** e usa i suoi colori, le misure dei titoli e i componenti (apertura, fascia credenziali, schede, passi numerati, domande frequenti, modulo) così come sono, cambiando solo l'accento del partner e i testi. Struttura e componenti dell'esempio in `examples/` seguono già quello stile. Se il brief chiede qualcosa che lo stile non prevede, costruiscilo con gli stessi colori, raggi e ombre.
 
 ## Foto
 
@@ -152,7 +156,7 @@ Consegna **file da scaricare**, non solo testo nella chat:
 
 Se vuoi far vedere un'anteprima nella chat, fallo a parte: i file da consegnare restano quelli del contratto, con gli indirizzi `FOTO/`.
 
-Esempio completo e corretto: `examples/farmacia-esempio.html` con `examples/farmacia-esempio.css`. Prendilo come riferimento per struttura, CSS e modulo, non per i testi.
+Esempio completo e corretto: `examples/farmacia-esempio.html` con `examples/farmacia-esempio.css`. Prendilo come riferimento per struttura, stile, CSS e modulo, non per i testi.
 
 ## Prima di consegnare: controllo finale
 

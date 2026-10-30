@@ -46,7 +46,8 @@ In ogni skill, `references/` contiene:
 
 - `regole-pagine.md` — le regole controllate dal plugin WordPress (R01-R12). **Non modificarlo qui**: la fonte unica è `docs/regole-pagine.md` del repository del plugin WordPress;
 - `scheda-consegna.md` — il modello della scheda di consegna;
-- `guida-wordpress.md` — la guida per pubblicare.
+- `guida-wordpress.md` — la guida per pubblicare;
+- `stile-pagine.md` — colori, misure e componenti delle pagine già online, da seguire perché le pagine nuove siano della stessa famiglia.
 
 Gli esempi sono inventati.
 
@@ -59,7 +60,7 @@ bin/sync-regole.sh           # copia le regole dal repository WordPress (accanto
 bin/sync-regole.sh --check   # controlla soltanto che i file siano allineati
 ```
 
-Scheda e guida si modificano **solo** nella skill `landing`: lo script le copia in `pagina-partner`. Se il repository WordPress non sta nella cartella accanto, indica il percorso con `WP_REPO=/percorso/del/repo bin/sync-regole.sh`.
+Scheda, guida e stile si modificano **solo** nella skill `landing`: lo script le copia in `pagina-partner`. Se il repository WordPress non sta nella cartella accanto, indica il percorso con `WP_REPO=/percorso/del/repo bin/sync-regole.sh`.
 
 Per controllare un esempio con le stesse regole del plugin, dal repository WordPress:
 

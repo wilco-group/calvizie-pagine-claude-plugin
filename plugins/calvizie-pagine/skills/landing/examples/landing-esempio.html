@@ -17,103 +17,159 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
 <style>
+/* Stile: references/stile-pagine.md (sezione "Solo landing") */
+body { margin: 0; background: #f5f7fb; }
 .landing-esempio-page {
-  --blu: #1f4497;
-  --blu-scuro: #0d0b52;
-  --blu-chiaro: #eef2fb;
-  --arancio: #f7911e;
-  --arancio-scuro: #e07f0d;
-  --testo: #2b3240;
-  --grigio: #5b6472;
-  --bordo: #e4e8f0;
-  --sfondo: #f5f7fb;
-  --raggio: 14px;
-  font-family: 'Oxygen', system-ui, sans-serif;
-  color: var(--testo);
-  line-height: 1.6;
-  font-size: 17px;
-  background: #ffffff;
+  --blu: #1f4497; --blu-scuro: #16336f; --blu-chiaro: #eef2fb;
+  --arancio: #f7911e; --arancio-scuro: #e07f0d;
+  --ink: #15171a; --testo: #2b3240; --grigio: #5b6472; --grigio-chiaro: #8a93a3;
+  --bordo: #e4e8f0; --bg: #f5f7fb; --bianco: #ffffff;
+  --verde: #1f9d55; --verde-bg: #e9f7ef;
+  --accento: #2e7d6b; --accento-scuro: #1f5c4e; --accento-bg: #eaf4f1;
+  --raggio: 14px; --raggio-sm: 9px;
+  --ombra: 0 2px 10px rgba(21, 23, 26, .06); --ombra-md: 0 8px 28px rgba(31, 68, 151, .12);
+  font-family: 'Oxygen', system-ui, -apple-system, sans-serif; color: var(--testo); background: var(--bg); line-height: 1.55; -webkit-font-smoothing: antialiased;
 }
 .landing-esempio-page,
 .landing-esempio-page * { margin: 0; padding: 0; box-sizing: border-box; }
 .landing-esempio-page h1,
 .landing-esempio-page h2,
-.landing-esempio-page h3 { font-family: 'Roboto', sans-serif; color: var(--blu-scuro); line-height: 1.15; }
-.landing-esempio-page h1 { font-size: clamp(2rem, 4.2vw, 3rem); font-weight: 900; }
-.landing-esempio-page h2 { font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 700; }
-.landing-esempio-page h3 { font-size: 1.15rem; font-weight: 700; margin-top: 10px; }
-.landing-esempio-page p { margin-top: 12px; }
+.landing-esempio-page h3 { font-family: 'Roboto', sans-serif; color: var(--ink); text-wrap: balance; }
+.landing-esempio-page img { max-width: 100%; display: block; }
 .landing-esempio-page a { color: var(--blu); }
-.landing-esempio-page img { max-width: 100%; height: auto; display: block; }
 .landing-esempio-page :focus-visible { outline: 3px solid var(--arancio); outline-offset: 2px; }
-.landing-esempio-page .contenitore { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+.landing-esempio-page .container { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
 
-.landing-esempio-page .testata { border-bottom: 1px solid var(--bordo); padding: 16px 0; }
-.landing-esempio-page .marchio { font: 900 1.3rem 'Roboto', sans-serif; color: var(--blu-scuro); text-decoration: none; }
+/* Testata co-brand */
+.landing-esempio-page .topbar { background: var(--bianco); border-bottom: 1px solid var(--bordo); }
+.landing-esempio-page .topbar-in { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 62px; max-width: 1120px; margin: 0 auto; padding: 8px 20px; }
+.landing-esempio-page .marchio { font-family: 'Roboto', sans-serif; font-weight: 900; font-size: 1.1rem; color: var(--blu-scuro); text-decoration: none; line-height: 1.1; }
+.landing-esempio-page .marchio small { display: block; font-family: 'Oxygen', sans-serif; font-weight: 400; font-size: .66rem; color: var(--grigio-chiaro); letter-spacing: .14em; text-transform: uppercase; margin-top: 2px; }
+.landing-esempio-page .verificato { display: inline-flex; align-items: center; gap: 5px; background: var(--verde-bg); color: var(--verde); font-size: .74rem; font-weight: 700; padding: 5px 11px; border-radius: 999px; }
 
-.landing-esempio-page .apertura { background: linear-gradient(160deg, var(--blu-chiaro) 0%, #ffffff 70%); padding: 48px 0 56px; }
-.landing-esempio-page .apertura-griglia { display: grid; grid-template-columns: 1fr 1fr; gap: 44px; align-items: start; }
-.landing-esempio-page .lead { font-size: 1.1rem; }
-.landing-esempio-page .punti { list-style: none; margin-top: 18px; }
-.landing-esempio-page .punti li { padding-left: 26px; position: relative; margin-top: 6px; }
-.landing-esempio-page .punti li::before { content: "✓"; position: absolute; left: 0; color: var(--blu); font-weight: 700; }
-.landing-esempio-page .foto { border-radius: var(--raggio); margin-top: 24px; }
+/* Pulsanti */
+.landing-esempio-page .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; width: 100%; border: 0; border-radius: var(--raggio-sm); font-family: inherit; font-weight: 800; font-size: 1rem; padding: 15px 26px; text-decoration: none; cursor: pointer; transition: background .15s; }
+.landing-esempio-page .btn-arancio { background: var(--arancio); color: var(--blu-scuro); }
+.landing-esempio-page .btn-arancio:hover { background: var(--arancio-scuro); }
 
-.landing-esempio-page .modulo { background: #ffffff; border: 1px solid var(--bordo); border-radius: var(--raggio); padding: 28px; box-shadow: 0 8px 28px rgba(31, 68, 151, .12); }
-.landing-esempio-page .modulo h2 { font-size: 1.4rem; }
-.landing-esempio-page .campo { margin-top: 16px; }
-.landing-esempio-page .campo label { display: block; font-weight: 700; font-size: .92rem; margin-bottom: 6px; }
+/* Apertura con il modulo */
+.landing-esempio-page .hero { background: radial-gradient(circle at 88% 12%, rgba(247, 145, 30, .16), transparent 38%), radial-gradient(circle at 8% 90%, rgba(46, 125, 107, .16), transparent 40%), linear-gradient(160deg, #f2f8f6 0%, #ffffff 55%, #fff7ee 100%); border-bottom: 1px solid var(--bordo); }
+.landing-esempio-page .hero-in { max-width: 1160px; margin: 0 auto; padding: 40px 20px 48px; display: grid; grid-template-columns: 1fr 410px; gap: 44px; align-items: start; }
+.landing-esempio-page .hero-badges { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
+.landing-esempio-page .hb { display: inline-flex; align-items: center; gap: 6px; font-size: .78rem; font-weight: 800; padding: 6px 12px; border-radius: 999px; }
+.landing-esempio-page .hb-verde { background: var(--verde-bg); color: var(--verde); }
+.landing-esempio-page .hb-arancio { background: #fff1df; color: #9a5205; }
+.landing-esempio-page .hero h1 { font-size: clamp(2rem, 3.9vw, 3rem); font-weight: 900; line-height: 1.08; letter-spacing: -.015em; max-width: 620px; }
+.landing-esempio-page .hl { background: linear-gradient(transparent 62%, rgba(247, 145, 30, .35) 62%); padding: 0 2px; }
+.landing-esempio-page .lead { margin-top: 14px; font-size: 1.08rem; max-width: 580px; }
+.landing-esempio-page .vantaggi { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 10px 18px; margin-top: 22px; max-width: 600px; }
+.landing-esempio-page .vantaggi li { display: flex; gap: 10px; align-items: flex-start; font-size: .95rem; font-weight: 600; color: var(--ink); }
+.landing-esempio-page .vantaggi i { font-style: normal; width: 24px; height: 24px; border-radius: 50%; background: var(--accento); color: #fff; display: flex; align-items: center; justify-content: center; font-size: .8rem; font-weight: 900; flex-shrink: 0; }
+.landing-esempio-page .foto { width: 100%; max-width: 600px; aspect-ratio: 3/2; object-fit: cover; border-radius: var(--raggio); box-shadow: var(--ombra-md); margin-top: 26px; }
+
+/* Modulo */
+.landing-esempio-page .form-card { position: relative; background: var(--bianco); border: 2px solid var(--arancio); border-radius: var(--raggio); box-shadow: var(--ombra-md); padding: 34px 26px 26px; scroll-margin-top: 20px; }
+.landing-esempio-page .form-ribbon { position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: var(--arancio); color: var(--blu-scuro); font-family: 'Roboto', sans-serif; font-weight: 900; font-size: .8rem; letter-spacing: .06em; padding: 6px 16px; border-radius: 999px; white-space: nowrap; }
+.landing-esempio-page .form-card h2 { font-size: 1.3rem; font-weight: 900; line-height: 1.15; }
+.landing-esempio-page .form-card .sub { font-size: .88rem; color: var(--grigio); margin: 6px 0 14px; }
+.landing-esempio-page .campo { margin-bottom: 11px; }
+.landing-esempio-page .campo label,
+.landing-esempio-page .scelte legend { display: block; font-weight: 700; font-size: .88rem; color: var(--ink); margin-bottom: 6px; }
 .landing-esempio-page .campo input,
-.landing-esempio-page .campo select,
-.landing-esempio-page .campo textarea { width: 100%; font: inherit; color: var(--testo); padding: 11px 13px; border: 1px solid var(--bordo); border-radius: 9px; background: #ffffff; }
-.landing-esempio-page .scelte { border: 0; margin-top: 16px; }
-.landing-esempio-page .scelte legend { font-weight: 700; font-size: .92rem; margin-bottom: 6px; }
-.landing-esempio-page .scelte label { display: inline-flex; gap: 6px; align-items: center; margin-right: 18px; }
-.landing-esempio-page .consenso { display: flex; gap: 10px; align-items: flex-start; font-size: .9rem; margin-top: 14px; }
-.landing-esempio-page .consenso input { margin-top: 4px; flex: 0 0 auto; }
-.landing-esempio-page .pulsante { display: block; width: 100%; margin-top: 20px; border: 0; border-radius: 9px; background: var(--arancio); color: var(--blu-scuro); font: 700 1.05rem 'Roboto', sans-serif; padding: 15px 24px; cursor: pointer; }
-.landing-esempio-page .pulsante:hover { background: var(--arancio-scuro); }
-.landing-esempio-page .cp-form-sospeso { background: var(--blu-chiaro); border: 1px solid var(--bordo); border-radius: var(--raggio); padding: 24px; font-weight: 700; color: var(--blu-scuro); }
+.landing-esempio-page .campo textarea { width: 100%; font: inherit; font-size: .95rem; color: var(--testo); padding: 12px; border: 1.5px solid var(--bordo); border-radius: 8px; background: #fff; }
+.landing-esempio-page .campo input:focus,
+.landing-esempio-page .campo textarea:focus { outline: none; border-color: var(--blu); }
+.landing-esempio-page .scelte { border: 0; margin-bottom: 11px; display: flex; flex-wrap: wrap; gap: 8px; }
+.landing-esempio-page .scelte legend { width: 100%; }
+.landing-esempio-page .scelte label { display: inline-flex; align-items: center; gap: 6px; font-weight: 600; font-size: .9rem; border: 1px solid var(--bordo); border-radius: 999px; padding: 7px 12px; background: #fbfcfe; cursor: pointer; }
+.landing-esempio-page .consenso { display: flex; gap: 8px; align-items: flex-start; font-size: .78rem; color: var(--grigio); margin: 8px 0; }
+.landing-esempio-page .consenso input { margin-top: 2px; flex-shrink: 0; }
+.landing-esempio-page .form-card .btn { margin-top: 10px; font-size: 1.06rem; padding: 16px 20px; box-shadow: 0 6px 16px rgba(247, 145, 30, .35); }
+.landing-esempio-page .garanzie { display: grid; gap: 6px; margin-top: 14px; padding-top: 14px; border-top: 1px dashed var(--bordo); }
+.landing-esempio-page .garanzie span { font-size: .8rem; color: var(--grigio); display: flex; gap: 7px; }
+.landing-esempio-page .garanzie span::before { content: "✓"; color: var(--verde); font-weight: 900; }
+.landing-esempio-page .cp-form-sospeso { background: var(--blu-chiaro); border: 1px solid var(--bordo); border-radius: var(--raggio); padding: 20px; font-weight: 700; color: var(--blu-scuro); }
 
+/* Fascia credenziali */
+.landing-esempio-page .cred { background: var(--bianco); border-bottom: 1px solid var(--bordo); }
+.landing-esempio-page .cred-in { max-width: 1120px; margin: 0 auto; padding: 18px 20px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.landing-esempio-page .cred-item { display: flex; align-items: center; gap: 12px; }
+.landing-esempio-page .cred-item .ico { width: 46px; height: 46px; border-radius: 50%; background: var(--accento-bg); color: var(--accento-scuro); display: flex; align-items: center; justify-content: center; font-family: 'Roboto', sans-serif; font-weight: 900; flex-shrink: 0; }
+.landing-esempio-page .cred-item p { font-size: .82rem; color: var(--grigio); line-height: 1.3; }
+.landing-esempio-page .cred-item b { display: block; color: var(--ink); font-family: 'Roboto', sans-serif; font-size: .92rem; }
+
+/* Sezioni */
 .landing-esempio-page .sezione { padding: 56px 0; }
-.landing-esempio-page .schede { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 28px; }
-.landing-esempio-page .scheda { background: var(--sfondo); border-radius: var(--raggio); padding: 24px; }
+.landing-esempio-page .sezione.bianca { background: var(--bianco); }
+.landing-esempio-page .sezione h2 { font-size: 1.8rem; font-weight: 900; text-align: center; margin-bottom: 8px; }
+.landing-esempio-page .intro { text-align: center; color: var(--grigio); max-width: 640px; margin: 0 auto 34px; }
+.landing-esempio-page .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; max-width: 900px; margin: 0 auto; }
+.landing-esempio-page .step { text-align: center; padding: 0 8px; }
+.landing-esempio-page .step .num { width: 46px; height: 46px; border-radius: 50%; background: var(--blu); color: #fff; font-family: 'Roboto', sans-serif; font-weight: 900; font-size: 1.2rem; display: flex; align-items: center; justify-content: center; margin: 0 auto 12px; }
+.landing-esempio-page .step h3 { font-size: 1.05rem; font-weight: 800; margin-bottom: 4px; }
+.landing-esempio-page .step p { font-size: .9rem; color: var(--grigio); }
+.landing-esempio-page .faq { max-width: 780px; margin: 0 auto; display: grid; gap: 10px; }
+.landing-esempio-page .faq details { background: var(--bianco); border: 1px solid var(--bordo); border-radius: 10px; padding: 14px 18px; box-shadow: var(--ombra); }
+.landing-esempio-page .faq summary { font-family: 'Roboto', sans-serif; font-weight: 700; color: var(--ink); cursor: pointer; list-style: none; display: flex; justify-content: space-between; gap: 12px; }
+.landing-esempio-page .faq summary::-webkit-details-marker { display: none; }
+.landing-esempio-page .faq summary::after { content: "+"; color: var(--accento); font-weight: 900; }
+.landing-esempio-page .faq details[open] summary::after { content: "–"; }
+.landing-esempio-page .faq p { font-size: .92rem; color: var(--grigio); margin-top: 8px; }
 
-.landing-esempio-page .piede { background: var(--blu-scuro); color: #ffffff; padding: 24px 0; font-size: .9rem; }
-.landing-esempio-page .piede a { color: #ffffff; }
+/* Invito finale e piè di pagina */
+.landing-esempio-page .cta-finale { background: linear-gradient(135deg, var(--blu-scuro), var(--blu)); color: #fff; text-align: center; padding: 56px 20px; }
+.landing-esempio-page .cta-finale h2 { color: #fff; font-size: 1.9rem; font-weight: 900; margin-bottom: 10px; }
+.landing-esempio-page .cta-finale p { color: rgba(255, 255, 255, .85); max-width: 560px; margin: 0 auto 24px; }
+.landing-esempio-page .cta-finale .btn { max-width: 360px; }
+.landing-esempio-page .piede { background: #0f1f45; color: rgba(255, 255, 255, .6); font-size: .82rem; padding: 22px 20px; text-align: center; }
+.landing-esempio-page .piede a { color: rgba(255, 255, 255, .85); }
 
-.landing-esempio-page .todo { background: #fff3cd; color: #7a5a00; border-radius: 4px; padding: 0 4px; font-weight: 700; }
-
-@media (max-width: 760px) {
-  .landing-esempio-page .apertura-griglia,
-  .landing-esempio-page .schede { grid-template-columns: 1fr; gap: 24px; }
-  .landing-esempio-page .apertura { padding: 32px 0 40px; }
-  .landing-esempio-page .modulo { padding: 20px; }
+@media (max-width: 900px) {
+  .landing-esempio-page .hero-in { grid-template-columns: 1fr; gap: 30px; padding: 24px 16px 34px; }
+  .landing-esempio-page .hero h1 { font-size: 1.85rem; }
+  .landing-esempio-page .vantaggi,
+  .landing-esempio-page .steps { grid-template-columns: 1fr; }
+  .landing-esempio-page .cred-in { grid-template-columns: 1fr 1fr; gap: 14px 12px; padding: 16px; }
+  .landing-esempio-page .form-card { padding: 30px 20px 22px; }
+  .landing-esempio-page .verificato { display: none; }
+  .landing-esempio-page .sezione { padding: 40px 0; }
+  .landing-esempio-page .sezione h2,
+  .landing-esempio-page .cta-finale h2 { font-size: 1.5rem; }
 }
 </style>
 </head>
 <body>
 <main class="landing-esempio-page">
 
-  <header class="testata">
-    <div class="contenitore"><a class="marchio" href="https://calvizie.net/">Calvizie.net</a></div>
+  <header class="topbar">
+    <div class="topbar-in">
+      <a class="marchio" href="https://calvizie.net/">Calvizie.net<small>Consulenza tricologica</small></a>
+      <span class="verificato">✓ Consulenza gratuita</span>
+    </div>
   </header>
 
-  <section class="apertura">
-    <div class="contenitore apertura-griglia">
+  <section class="hero">
+    <div class="hero-in">
       <div>
-        <h1>Perdi capelli? Parliamone, senza impegno</h1>
+        <div class="hero-badges">
+          <span class="hb hb-verde">✓ Senza impegno</span>
+          <span class="hb hb-arancio">Risposta in due giorni</span>
+        </div>
+        <h1>Perdi capelli? <span class="hl">Parliamone</span>, senza impegno</h1>
         <p class="lead">Lasciaci i tuoi contatti: ti richiamiamo entro due giorni lavorativi per capire insieme da dove partire e a chi rivolgerti.</p>
-        <ul class="punti">
-          <li>Consulenza gratuita e senza impegno</li>
-          <li>Ti ricontattiamo entro due giorni lavorativi</li>
-          <li>I tuoi dati restano riservati</li>
+        <ul class="vantaggi">
+          <li><i>✓</i> Consulenza gratuita</li>
+          <li><i>✓</i> Ti richiamiamo noi</li>
+          <li><i>✓</i> Orari che scegli tu</li>
+          <li><i>✓</i> Dati riservati</li>
         </ul>
         <img class="foto" src="https://calvizie.net/wp-content/uploads/FOTO/landing-esempio-apertura.jpg" alt="Una consulente parla con una persona" width="640" height="420">
       </div>
 
-      <form data-lead-form class="modulo">
+      <form data-lead-form class="form-card" id="modulo">
+        <span class="form-ribbon">Prima consulenza gratuita</span>
         <h2>Richiedi la consulenza</h2>
+        <p class="sub">I campi con * sono obbligatori.</p>
         <div class="campo">
           <label for="le-nome">Nome e cognome *</label>
           <input id="le-nome" name="nome" type="text" autocomplete="name" required>
@@ -136,29 +192,64 @@
           <textarea id="le-messaggio" name="messaggio" rows="3"></textarea>
         </div>
         <label class="consenso"><input type="checkbox" name="privacy" required>
-          Ho letto l'<a href="https://calvizie.net/informativa-privacy-clienti/" target="_blank" rel="noopener">informativa privacy</a> e acconsento al trattamento dei miei dati per essere ricontattato. *</label>
+          <span>Ho letto l'<a href="https://calvizie.net/informativa-privacy-clienti/" target="_blank" rel="noopener">informativa privacy</a> e acconsento al trattamento dei miei dati per essere ricontattato. *</span></label>
         <label class="consenso"><input type="checkbox" name="consenso_marketing">
-          Voglio ricevere la newsletter di Calvizie.net (facoltativo).</label>
-        <button type="submit" class="pulsante">Voglio essere ricontattato</button>
+          <span>Voglio ricevere la newsletter di Calvizie.net (facoltativo).</span></label>
+        <button type="submit" class="btn btn-arancio">Voglio essere ricontattato</button>
+        <div class="garanzie">
+          <span>Nessun impegno</span>
+          <span>Ti ricontattiamo entro due giorni lavorativi</span>
+        </div>
       </form>
     </div>
   </section>
 
-  <section class="sezione">
-    <div class="contenitore">
+  <section class="cred">
+    <div class="cred-in">
+      <div class="cred-item"><span class="ico">1</span><p><b>Un minuto</b>per compilare il modulo</p></div>
+      <div class="cred-item"><span class="ico">2</span><p><b>Due giorni</b>per essere ricontattato</p></div>
+      <div class="cred-item"><span class="ico">✓</span><p><b>Gratuita</b>e senza impegno</p></div>
+      <div class="cred-item"><span class="ico">✓</span><p><b>Riservata</b>i dati restano a noi</p></div>
+    </div>
+  </section>
+
+  <section class="sezione bianca">
+    <div class="container">
       <h2>Come funziona</h2>
-      <div class="schede">
-        <div class="scheda"><h3>1. Compili il modulo</h3><p>Bastano un minuto e pochi dati.</p></div>
-        <div class="scheda"><h3>2. Ti richiamiamo</h3><p>Entro due giorni lavorativi, nell'orario che preferisci.</p></div>
-        <div class="scheda"><h3>3. Decidi tu</h3><p>Ti spieghiamo le possibilità; nessun obbligo.</p></div>
+      <p class="intro">Tre passi, e decidi sempre tu se e come andare avanti.</p>
+      <div class="steps">
+        <div class="step"><div class="num">1</div><h3>Compili il modulo</h3><p>Bastano un minuto e pochi dati.</p></div>
+        <div class="step"><div class="num">2</div><h3>Ti richiamiamo</h3><p>Entro due giorni lavorativi, nell'orario che preferisci.</p></div>
+        <div class="step"><div class="num">3</div><h3>Decidi tu</h3><p>Ti spieghiamo le possibilità; nessun obbligo.</p></div>
       </div>
     </div>
   </section>
 
-  <footer class="piede">
-    <div class="contenitore">
-      <p>© Calvizie.net · <a href="https://calvizie.net/informativa-privacy-clienti/" target="_blank" rel="noopener">Informativa privacy</a></p>
+  <section class="sezione">
+    <div class="container">
+      <h2>Domande frequenti</h2>
+      <p class="intro">Le risposte alle domande che ci fanno più spesso.</p>
+      <div class="faq">
+        <details>
+          <summary>La consulenza è davvero gratuita?</summary>
+          <p>Sì: la prima chiamata non costa nulla e non ti impegna a niente.</p>
+        </details>
+        <details>
+          <summary>La consulenza sostituisce la visita medica?</summary>
+          <p>No. Ti aiutiamo a orientarti; diagnosi e terapie spettano al medico.</p>
+        </details>
+      </div>
     </div>
+  </section>
+
+  <section class="cta-finale">
+    <h2>Parliamone senza impegno</h2>
+    <p>Lasciaci i tuoi contatti: ti richiamiamo entro due giorni lavorativi.</p>
+    <a class="btn btn-arancio" href="#modulo">Richiedi la consulenza</a>
+  </section>
+
+  <footer class="piede">
+    <p>© Calvizie.net · <a href="https://calvizie.net/informativa-privacy-clienti/" target="_blank" rel="noopener">Informativa privacy</a></p>
   </footer>
 
 </main>
