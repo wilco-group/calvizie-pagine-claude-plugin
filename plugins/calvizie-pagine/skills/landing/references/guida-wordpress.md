@@ -92,6 +92,7 @@ Da quel momento la pagina partner si vede all'indirizzo della categoria: in alto
    - per tutto il resto: copia il testo della barra a Claude e chiedi di correggere i file.
 3. Correggi, salva, riapri l'anteprima. La barra la vedono solo gli amministratori: non pubblicare finché la barra rossa non è sparita.
 4. Guarda la pagina anche dal telefono (o restringendo la finestra): testi leggibili, foto al loro posto, modulo usabile.
+5. **Far vedere la pagina a chi non ha un account** (per esempio il partner che deve approvarla): nel riquadro **Form della landing/pagina**, sezione **Link di anteprima**, clicca **Crea link (valido 7 giorni)** e manda l'indirizzo che compare. Chi lo apre vede la pagina completa, con una fascia gialla "Anteprima" in alto; il modulo si compila ma non invia nulla, anche se è sospeso. **Nuovo link** sostituisce il precedente, **Revoca** lo disattiva subito. Salva le modifiche prima di creare il link.
 
 ## 10. Pubblica
 
