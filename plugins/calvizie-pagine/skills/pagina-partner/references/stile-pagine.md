@@ -19,7 +19,7 @@ Negli esempi il prefisso è `.<x>-page`. Nella pagina partner ogni selettore ini
   --arancio:#f7911e; --arancio-scuro:#e07f0d;
   --ink:#15171a; --testo:#2b3240; --grigio:#5b6472; --grigio-chiaro:#8a93a3;
   --bordo:#e4e8f0; --bg:#f5f7fb; --bianco:#ffffff;
-  --verde:#1f9d55; --verde-bg:#e9f7ef;
+  --verde:#177a45; --verde-bg:#e9f7ef;
   /* accento del partner: tre toni dello stesso colore (vedi sotto) */
   --accento:#2e7d6b; --accento-scuro:#1f5c4e; --accento-bg:#eaf4f1;
   --raggio:14px; --raggio-sm:9px;
@@ -28,7 +28,8 @@ Negli esempi il prefisso è `.<x>-page`. Nella pagina partner ogni selettore ini
 ```
 
 - **Accento:** un colore preso dal marchio del partner (per esempio il verde di un logo), in tre toni: pieno (`--accento`, per occhielli e spunte), scuro (`--accento-scuro`, per testi su fondo chiaro) e chiarissimo (`--accento-bg`, per i fondi di icone e etichette). Se il partner non ha un colore, usa il verde-acqua dell'esempio. Mai più di un accento.
-- **Testo sui pulsanti arancio:** blu scuro (`var(--blu-scuro)`), non bianco: il bianco sull'arancio si legge male.
+- **Testo sui pulsanti arancio:** blu scuro (`var(--blu-scuro)`), non bianco: il bianco sull'arancio si legge male. Al passaggio del mouse lo sfondo diventa `--arancio-scuro` e il testo `--ink`.
+- **Leggibilità:** testi in `--grigio-chiaro` solo se grandi o decorativi, mai sotto 11px; il verde per i testi è `--verde` su `--verde-bg` o su bianco; spaziatura delle lettere oltre `.05em` solo per occhielli brevi in maiuscolo.
 - Titoli in `--ink`, testo in `--testo`, testi secondari in `--grigio`.
 
 ## Testo
@@ -67,7 +68,7 @@ Contenitore: `max-width:1120px; margin:0 auto; padding:0 20px`. Spazi tra colonn
 /* pulsanti */
 .<x>-page .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:var(--raggio-sm);font-weight:700;font-size:1rem;padding:14px 24px;text-decoration:none;transition:background .15s}
 .<x>-page .btn-arancio{background:var(--arancio);color:var(--blu-scuro)}
-.<x>-page .btn-arancio:hover{background:var(--arancio-scuro)}
+.<x>-page .btn-arancio:hover{background:var(--arancio-scuro);color:var(--ink)}
 .<x>-page .btn-linea{border:2px solid var(--blu);color:var(--blu);background:#fff}
 .<x>-page .btn-linea:hover{background:var(--blu-chiaro)}
 

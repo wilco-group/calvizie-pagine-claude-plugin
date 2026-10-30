@@ -8,7 +8,7 @@
   --arancio: #f7911e; --arancio-scuro: #e07f0d;
   --ink: #15171a; --testo: #2b3240; --grigio: #5b6472; --grigio-chiaro: #8a93a3;
   --bordo: #e4e8f0; --bg: #f5f7fb; --bianco: #ffffff;
-  --verde: #1f9d55; --verde-bg: #e9f7ef;
+  --verde: #177a45; --verde-bg: #e9f7ef;
   /* accento del partner */
   --accento: #2e7d6b; --accento-scuro: #1f5c4e; --accento-bg: #eaf4f1;
   --raggio: 14px; --raggio-sm: 9px;
@@ -29,7 +29,7 @@
 /* Pulsanti */
 .farmacia-esempio-page .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; border-radius: var(--raggio-sm); font-weight: 700; font-size: 1rem; padding: 14px 24px; text-decoration: none; transition: background .15s; border: 0; cursor: pointer; font-family: inherit; }
 .farmacia-esempio-page .btn-arancio { background: var(--arancio); color: var(--blu-scuro); }
-.farmacia-esempio-page .btn-arancio:hover { background: var(--arancio-scuro); }
+.farmacia-esempio-page .btn-arancio:hover { background: var(--arancio-scuro); color: var(--ink); }
 .farmacia-esempio-page .btn-linea { border: 2px solid var(--blu); color: var(--blu); background: #fff; }
 .farmacia-esempio-page .btn-linea:hover { background: var(--blu-chiaro); }
 
