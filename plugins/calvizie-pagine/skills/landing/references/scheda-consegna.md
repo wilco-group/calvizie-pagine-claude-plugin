@@ -21,6 +21,7 @@ Copia il modello qui sotto e compilalo.
 - Titolo della pagina in WordPress: <titolo>
 - Slug: <slug, minuscolo con trattini, es. consulenza-gratuita>
 - URL finale: <landing: https://calvizie.net/<slug>/ | partner: l'indirizzo della categoria, es. https://calvizie.net/category/<slug-categoria>/>
+- Chi approva la pagina prima della pubblicazione: <persona o ruolo, per esempio il partner (gli si manda il link di anteprima) | nessuno>
 - Classe del contenitore: <x>-page (l'HTML è dentro <main class="<x>-page">)
 - File da incollare:
   - <nome-file>.html → riquadro "HTML della pagina"

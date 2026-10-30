@@ -1,6 +1,6 @@
 ---
 name: landing
-description: Progetta una landing page per calvizie.net (pagina a sé, senza menu del sito, di solito per campagne) e consegna l'HTML pronto per il plugin WordPress Pagine Calvizie, la scheda di consegna compilata e la guida per pubblicarla. Usala quando chiedono "fai una landing per Calvizie.net", una pagina di campagna, una landing con modulo contatti per calvizie.net. Per una pagina partner dentro il sito (con menu e articoli della categoria sotto) usa invece la skill pagina-partner.
+description: Progetta una landing page per calvizie.net (pagina a sé, senza menu del sito, di solito per campagne) e consegna l'HTML pronto per il plugin WordPress Pagine Calvizie, la scheda di consegna compilata e la guida per pubblicarla; poi accompagna chi pubblica passo passo in WordPress fino all'anteprima e alla messa online. Usala anche per guidare la pubblicazione di una landing già pronta ("guidami nella pubblicazione", "come la metto online su calvizie.net"). Usala quando chiedono "fai una landing per Calvizie.net", una pagina di campagna, una landing con modulo contatti per calvizie.net. Per una pagina partner dentro il sito (con menu e articoli della categoria sotto) usa invece la skill pagina-partner.
 ---
 
 # Landing per calvizie.net
@@ -85,7 +85,7 @@ Le foto sono **file separati** che chi pubblica carica nella Libreria media di W
 <img src="https://calvizie.net/wp-content/uploads/FOTO/foto-apertura.jpg" alt="Descrizione breve della foto">
 ```
 
-- `https://calvizie.net/wp-content/uploads/FOTO/` è un indirizzo provvisorio: dopo il caricamento va sostituito con la cartella vera (la guida spiega come; puoi farlo tu se ti danno l'indirizzo di una foto caricata). Finché c'è, il plugin lo segnala (regola R02) e la pagina non va pubblicata: è voluto, serve a non dimenticare la sostituzione. Quindi **consegna comunque con `FOTO/`** (non inventare cartelle come `2026/11`), e avvisa la persona che va sostituito.
+- `https://calvizie.net/wp-content/uploads/FOTO/` è un indirizzo provvisorio: dopo il caricamento va sostituito con la cartella vera (la guida spiega come; lo fai tu quando ti danno l'indirizzo di una foto caricata: vedi "Dopo la consegna"). Finché c'è, il plugin lo segnala (regola R02) e la pagina non va pubblicata: è voluto, serve a non dimenticare la sostituzione. Quindi **consegna comunque con `FOTO/`** (non inventare cartelle come `2026/11`), e avvisa la persona che va sostituito.
 - Mai `__URL_FOTO__`, mai percorsi relativi (`foto.jpg`, `/img/foto.jpg`): il plugin li segnala.
 - Nomi dei file: minuscole, trattini, niente spazi né accenti (`foto-apertura.jpg`). Se la persona ti ha dato le foto con altri nomi, dille come rinominarle.
 - Consiglia foto larghe al massimo 2000 pixel, in JPG (o PNG per i loghi), già alleggerite.
@@ -152,7 +152,7 @@ Consegna **file da scaricare**, non solo testo nella chat:
 1. `<slug>.html` — la landing completa.
 2. `scheda-consegna-<slug>.md` — il modello di `references/scheda-consegna.md` compilato in ogni voce.
 3. L'elenco delle foto (è anche nella scheda): nome del file, dove va, testo alternativo.
-4. La guida per pubblicare: `references/guida-wordpress.md` (puoi allegarla così com'è o riassumerla nei passi che servono).
+4. La guida per pubblicare: `references/guida-wordpress.md`, allegata così com'è (non riassumerla: i passi e i nomi dei pulsanti sono quelli esatti di WordPress).
 
 Se vuoi far vedere un'anteprima nella chat, fallo a parte: i file da consegnare restano quelli del contratto, con gli indirizzi `FOTO/`.
 
@@ -173,4 +173,34 @@ Rileggi `references/regole-pagine.md` (sono le regole che il plugin controlla, R
 - [ ] Nessun `todo` rimasto, oppure ognuno è nella scheda (e la persona sa che la pagina non si pubblica finché ci sono).
 - [ ] Scheda di consegna compilata in ogni voce (o "DA DECIDERE: chi").
 
-Se trovi un errore, correggilo e rifai il controllo. Alla fine di' in due righe cosa consegni e cosa resta da fare.
+Se trovi un errore, correggilo e rifai il controllo. Alla fine di' in due righe cosa consegni e cosa resta da fare, e proponi di guidare la pubblicazione (sezione qui sotto).
+
+## Dopo la consegna: guidare la pubblicazione
+
+Chi pubblica non è uno sviluppatore. Dopo la consegna proponi: "Vuoi che ti guidi passo passo nella pubblicazione in WordPress?". Lo stesso vale se ti chiedono "guidami nella pubblicazione", "come la metto online" o simili, anche in una chat nuova: in quel caso fatti dare i file e la scheda (o rifalli dalla conversazione) prima di iniziare.
+
+Segui `references/guida-wordpress.md`, **nello stesso ordine** e con le stesse parole dei menu e dei pulsanti (il sito usa l'editor classico di WordPress, in italiano). Salta i passi che non riguardano questa pagina (per esempio categoria e CSS per una landing, o il modulo se non c'è): se ne salti, dillo in una riga al primo messaggio.
+
+**Un passo alla volta.** Per ogni passo scrivi:
+
+1. il numero e il nome del passo, e quanti ne restano (per esempio "Passo 3 di 11 · Crea la pagina");
+2. **dove**: il percorso esatto nel menu e il nome del riquadro (per esempio "menu a sinistra **Pagine > Aggiungi pagina**", "riquadro **Form della landing/pagina**, colonna di destra");
+3. **cosa fare**, in frasi brevi numerate;
+4. **cosa incollare**: ogni valore preso dalla scheda (titolo, slug, nome e slug della categoria, indirizzo del foglio, email di riserva, titolo e descrizione SEO) in un **blocco di codice a sé**, uno per campo, preceduto dal nome esatto del campo in cui va. Niente valori dentro le frasi: così si copiano senza errori. Per HTML e CSS indica il **nome del file** da aprire e copiare per intero, non incollarne il contenuto nella chat;
+5. **come capire che è fatto** (cosa deve vedere sullo schermo);
+6. alla fine: "Scrivimi **fatto** quando hai finito, oppure dimmi cosa vedi se qualcosa non torna."
+
+Poi **aspetta la risposta** prima del passo successivo. Non mandare più passi insieme, anche se te lo chiedono, a meno che dicano esplicitamente di volere l'elenco completo (in quel caso dai la guida intera, già adattata alla pagina e con i valori della scheda).
+
+Nei passi in cui serve il tuo lavoro:
+
+- **Foto (passo 1):** chiedi di incollarti l'indirizzo di una foto caricata e i nomi che WordPress ha cambiato. Poi rifai i file con la cartella vera al posto di `https://calvizie.net/wp-content/uploads/FOTO/` (e i nomi corretti), controlla che non resti `FOTO/` e consegnali come file nuovi con lo stesso nome. Di' chiaramente di usare da qui in avanti solo questi. Nello stesso messaggio puoi dare il passo successivo: la consegna dei file non conta come passo.
+- **Valori "DA DECIDERE"** nella scheda: quando arrivi al campo, dillo, spiega cosa succede se resta vuoto (per esempio il modulo resta sospeso) e chiedi se il valore c'è o se si va avanti lasciandolo in sospeso.
+- **Barra rossa dell'anteprima (passo 9):** chiedi di copiarti il testo della barra (o di mandarti una schermata). Spiega in parole semplici cosa significa ogni riga e, se la correzione è nei file, rifai i file e indica di nuovo i passi 4-5. Ripeti finché la barra non c'è più.
+- **Schermate:** se la persona ti manda una schermata, usala per dirle esattamente dove cliccare. Se quello che vede non corrisponde alla guida (un riquadro che manca, un pulsante con un altro nome), non inventare: dille di chiedere all'amministratore del sito e passale la frase da mandargli (la guida ne ha una pronta al passo 3).
+
+Regole che valgono per tutta la guida:
+
+- Non chiedere mai password, codici o chiavi, né di incollarli nella chat; non servono.
+- Il modulo resta **Sospeso** fino al passo 12, e si pubblica solo quando la barra rossa non c'è più e ci sono le approvazioni scritte previste dalla scheda. Se la persona vuole saltare questi controlli, ricordale in una frase cosa si rischia; la decisione resta sua.
+- Alla fine riepiloga in poche righe: indirizzo della pagina, stato del modulo, cosa resta da fare e chi lo fa (dalla scheda, sezioni "Regole speciali" e "Cose ancora da completare").
