@@ -2,7 +2,7 @@
 
 Plugin per Claude con due skill per progettare le pagine di [calvizie.net](https://calvizie.net) in modo che il plugin WordPress **Pagine Calvizie** le accetti senza ritocchi:
 
-- **landing** — landing page a sé (senza menu del sito), per esempio per le campagne;
+- **landing** — landing page a sé (senza menu del sito), per esempio per le campagne; ogni landing nuova vive in un sottodominio (`<nome>.calvizie.net`) che la guida fa creare per primo;
 - **pagina-partner** — pagina di un partner dentro il sito, con sotto gli articoli della sua categoria.
 
 Per ogni pagina Claude consegna l'HTML (e il CSS per le pagine partner), l'elenco delle foto, la **scheda di consegna** compilata e la **guida passo passo** per pubblicarla in WordPress.
@@ -44,9 +44,9 @@ bin/sync-regole.sh                         allinea i file di riferimento
 
 In ogni skill, `references/` contiene:
 
-- `regole-pagine.md` — le regole controllate dal plugin WordPress (R01-R12). **Non modificarlo qui**: la fonte unica è `docs/regole-pagine.md` del repository del plugin WordPress;
+- `regole-pagine.md` — le regole controllate dal plugin WordPress (R01-R12 e R17). **Non modificarlo qui**: la fonte unica è `docs/regole-pagine.md` del repository del plugin WordPress;
 - `scheda-consegna.md` — il modello della scheda di consegna;
-- `guida-wordpress.md` — la guida per pubblicare;
+- `guida-wordpress.md` — la guida per pubblicare (i passi A e B, creare il sottodominio e accedervi, valgono solo per le landing);
 - `stile-pagine.md` — colori, misure e componenti delle pagine già online, da seguire perché le pagine nuove siano della stessa famiglia.
 
 Gli esempi sono inventati.

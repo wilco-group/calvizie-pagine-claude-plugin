@@ -15,7 +15,7 @@ Parla in italiano semplice, frasi brevi, niente gergo. Non chiedere mai password
 |---|---|---|
 | Come si vede | pagina a sé, **senza** menu e piè di pagina del sito | **dentro** il sito, con menu e piè di pagina del tema |
 | A cosa serve | campagne, una sola azione (di solito il modulo) | presentare un partner (farmacia, azienda, centro); sotto compaiono gli articoli della sua categoria |
-| Indirizzo | `https://calvizie.net/<slug>/` | l'indirizzo della categoria collegata |
+| Indirizzo | un sottodominio tutto suo: `https://<nome>.calvizie.net/` | l'indirizzo della categoria collegata |
 | Cosa consegni | un file HTML completo (CSS dentro) | un frammento HTML + un file CSS |
 
 Se la richiesta è una pagina partner, usa la skill **pagina-partner**. Se non è chiaro, chiedilo con una domanda sola.
@@ -25,7 +25,7 @@ Se la richiesta è una pagina partner, usa la skill **pagina-partner**. Se non �
 Raccogli queste informazioni. Chiedi solo quelle che mancano, **una domanda alla volta**; se la persona ha fretta, procedi e segna le risposte mancanti come "DA DECIDERE" nella scheda.
 
 1. Obiettivo della landing e a chi parla.
-2. Slug (indirizzo), per esempio `consulenza-gratuita`.
+2. Nome del sottodominio (l'indirizzo), per esempio `consulenza-gratuita` per `https://consulenza-gratuita.calvizie.net/`. Proponilo tu dal nome del cliente o della landing, normalizzato: minuscole, senza accenti, spazi e simboli sostituiti da trattini, da 3 a 40 caratteri, solo lettere, numeri e trattini; fallo confermare. Non chiedere altro per il tracciamento: il contenitore delle statistiche del sito è caricato in automatico.
 3. Testi: quelli già approvati vanno usati **parola per parola**. Se li scrivi tu, dillo e falli approvare.
 4. Foto: quali sono, oppure quali servono.
 5. Modulo contatti: c'è? quali campi? quali consensi? dove arrivano i contatti (foglio Google), email di riserva, attivo o sospeso al lancio?
@@ -67,7 +67,7 @@ Regole:
 
 - **`<title>` e `<meta name="description">` non vuoti**: per le landing il SEO si legge da qui (Rank Math non ha effetto).
 - Se la landing non va indicizzata (per esempio solo per campagne), aggiungi `<meta name="robots" content="noindex, nofollow">` nel `<head>`.
-- **Un solo `<main class="<x>-page">`** che contiene tutto. `<x>` è lo slug o un suo accorciamento: minuscole, cifre e trattini (esempio: `consulenza-gratuita-page`).
+- **Un solo `<main class="<x>-page">`** che contiene tutto. `<x>` è il nome del sottodominio o un suo accorciamento: minuscole, cifre e trattini (esempio: `consulenza-gratuita-page`).
 - **CSS tutto in un `<style>` nel `<head>`**, con ogni selettore che inizia con `.<x>-page` (per le landing non è obbligatorio, ma tiene il codice ordinato e riutilizzabile). Il riquadro "CSS della pagina" in WordPress resta vuoto.
 - **Font:** Roboto per i titoli, Oxygen per il testo, caricati con il `<link>` qui sopra (la landing non ha i font del tema).
 - **Colori, misure e componenti:** quelli di `references/stile-pagine.md` (vedi "Lo stile" qui sotto). Testo dei pulsanti arancio in blu scuro: il bianco sull'arancio non si legge.
@@ -153,8 +153,8 @@ Regole dei campi:
 
 Consegna **file da scaricare**, non solo testo nella chat:
 
-1. `<slug>.html` — la landing completa.
-2. `scheda-consegna-<slug>.md` — il modello di `references/scheda-consegna.md` compilato in ogni voce.
+1. `<nome>.html` — la landing completa.
+2. `scheda-consegna-<nome>.md` — il modello di `references/scheda-consegna.md` compilato in ogni voce.
 3. L'elenco delle foto (è anche nella scheda): nome del file, dove va, testo alternativo.
 4. La guida per pubblicare: `references/guida-wordpress.md`, allegata così com'è (non riassumerla: i passi e i nomi dei pulsanti sono quelli esatti di WordPress).
 
@@ -164,7 +164,7 @@ Esempio completo e corretto: `examples/landing-esempio.html`. Prendilo come rife
 
 ## Prima di consegnare: controllo finale
 
-Rileggi `references/regole-pagine.md` (sono le regole che il plugin controlla, R01-R12) e correggi **ogni** punto (unica eccezione: l'indirizzo provvisorio `FOTO/` resta finché la persona non ti dà la cartella vera). Poi verifica questo elenco, una riga alla volta:
+Rileggi `references/regole-pagine.md` (sono le regole che il plugin controlla, R01-R12 e R17) e correggi **ogni** punto (unica eccezione: l'indirizzo provvisorio `FOTO/` resta finché la persona non ti dà la cartella vera). Poi verifica questo elenco, una riga alla volta:
 
 - [ ] Documento completo con `<title>` e `<meta name="description">` compilati.
 - [ ] Tutto il contenuto dentro un solo `<main class="<x>-page">`.
@@ -183,14 +183,16 @@ Se trovi un errore, correggilo e rifai il controllo. Alla fine di' in due righe 
 
 Chi pubblica non è uno sviluppatore. Dopo la consegna proponi: "Vuoi che ti guidi passo passo nella pubblicazione in WordPress?". Lo stesso vale se ti chiedono "guidami nella pubblicazione", "come la metto online" o simili, anche in una chat nuova: in quel caso fatti dare i file e la scheda (o rifalli dalla conversazione) prima di iniziare.
 
-Segui `references/guida-wordpress.md`, **nello stesso ordine** e con le stesse parole dei menu e dei pulsanti (il sito usa l'editor classico di WordPress, in italiano). Salta i passi che non riguardano questa pagina (per esempio categoria e CSS per una landing, o il modulo se non c'è): se ne salti, dillo in una riga al primo messaggio.
+Segui `references/guida-wordpress.md`, **nello stesso ordine** e con le stesse parole dei menu e dei pulsanti (il sito usa l'editor classico di WordPress, in italiano). Per una landing i passi sono, in ordine: **A** Crea il sottodominio, **B** Accedi al nuovo sito, poi 1 (foto), 3 (apri la pagina già creata), 4 (HTML), 7 (modulo), 8 (SEO), 9 (anteprima), 10 (approvazione, se serve), 11 (pubblica), 12 (attiva il modulo); contali così (11 passi in tutto). Salta i passi che non riguardano questa pagina (categoria, CSS e collegamento categoria sono solo per le partner; il modulo se non c'è): se ne salti, dillo in una riga al primo messaggio.
+
+Per una landing **nuova** il sottodominio si crea per primo (passo A) con il nome che hai proposto e che la scheda riporta: scrivi nome e indirizzo finale in un blocco di codice. Se la schermata propone un nome ripulito, fatti dire quale e usa quello da qui in avanti (indirizzo finale compreso, nell'HTML e nella scheda). Dopo l'accesso (passo B) ricorda che la pagina è già creata: **niente nuova pagina, niente template, niente permalink**, e che le foto si caricano nei Media del **nuovo** sito. Per il tracciamento non c'è niente da fare: non inventare passi sul Tag Manager o su altri codici. Se la persona prova a fare la landing su calvizie.net, la barra rossa dirà "Le landing nuove vanno su un sottodominio..." (regola R17): rimandala al passo A.
 
 **Un passo alla volta.** Per ogni passo scrivi:
 
-1. il numero e il nome del passo, e quanti ne restano (per esempio "Passo 3 di 11 · Crea la pagina");
+1. il numero e il nome del passo, e quanti ne restano (per esempio "Passo 4 di 11 · Apri la pagina della landing");
 2. **dove**: il percorso esatto nel menu e il nome del riquadro (per esempio "menu a sinistra **Pagine > Aggiungi pagina**", "riquadro **Form della landing/pagina**, colonna di destra");
 3. **cosa fare**, in frasi brevi numerate;
-4. **cosa incollare**: ogni valore preso dalla scheda (titolo, slug, nome e slug della categoria, indirizzo del foglio, email di riserva, titolo e descrizione SEO) in un **blocco di codice a sé**, uno per campo, preceduto dal nome esatto del campo in cui va. Niente valori dentro le frasi: così si copiano senza errori. Per HTML e CSS indica il **nome del file** da aprire e copiare per intero, non incollarne il contenuto nella chat;
+4. **cosa incollare**: ogni valore preso dalla scheda (titolo, nome del sottodominio o slug, nome e slug della categoria, indirizzo del foglio, email di riserva, titolo e descrizione SEO) in un **blocco di codice a sé**, uno per campo, preceduto dal nome esatto del campo in cui va. Niente valori dentro le frasi: così si copiano senza errori. Per HTML e CSS indica il **nome del file** da aprire e copiare per intero, non incollarne il contenuto nella chat;
 5. **come capire che è fatto** (cosa deve vedere sullo schermo);
 6. alla fine: "Scrivimi **fatto** quando hai finito, oppure dimmi cosa vedi se qualcosa non torna."
 

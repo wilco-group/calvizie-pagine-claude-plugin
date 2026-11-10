@@ -2,6 +2,8 @@
 
 Passo passo, per chi pubblica. Vale per le landing e per le pagine partner: dove le due cose differiscono è scritto. I passi vanno fatti **in quest'ordine**: ognuno prepara il successivo.
 
+**Landing e pagine partner hanno percorsi diversi.** Una landing nuova vive in un **sottodominio** tutto suo (per esempio `farmacia-esempio.calvizie.net`): per lei si parte dai passi **A** e **B** (solo landing) e poi si seguono i passi 1, 3 e seguenti, saltando quelli segnati "solo pagina partner". Una pagina partner salta i passi A e B e parte dal passo 1. I numeri dei passi sono gli stessi per tutti, così i rimandi restano validi.
+
 Tieni aperta la **scheda di consegna**: tutte le risposte (titolo, slug, categoria, modulo, SEO) sono lì. Se lavori con Claude, puoi anche fargli fare da guida: scrivigli "guidami nella pubblicazione" e ti dà un passo alla volta, con i testi esatti da incollare.
 
 ## Prima di iniziare
@@ -10,23 +12,45 @@ Ti servono:
 
 - i file consegnati da Claude: `.html`, `.css` (solo pagina partner) e la scheda di consegna;
 - le foto elencate nella scheda, con i nomi indicati;
-- un utente WordPress di calvizie.net con il permesso di modificare le pagine Calvizie. Se al passo 3 non vedi i riquadri "HTML della pagina" e "CSS della pagina", chiedi all'amministratore del sito di abilitarti.
+- un utente WordPress di calvizie.net con il permesso di modificare le pagine Calvizie (per le landing serve anche il permesso di creare il sottodominio: se al passo A non vedi la voce di menu, chiedi all'amministratore del sito). Se al passo 3 non vedi i riquadri "HTML della pagina" e "CSS della pagina", chiedi all'amministratore del sito di abilitarti.
 
 Il sito usa l'**editor classico** di WordPress: i pulsanti **Salva bozza**, **Anteprima** e **Pubblica** sono nel riquadro **Pubblica**, in alto a destra.
+
+## A. Crea il sottodominio (solo landing)
+
+Salta questo passo per le pagine partner. Serve una volta sola per ogni landing nuova: crea un sito a parte, con il suo indirizzo, già pronto con la pagina della landing.
+
+1. Sul sito **calvizie.net** (quello principale), menu a sinistra: **Pagine > Crea landing su sottodominio**.
+2. Scrivi il **nome del sottodominio** indicato nella scheda (o proposto da Claude): solo lettere minuscole, numeri e trattini, da 3 a 40 caratteri (esempio: `farmacia-esempio`). Sarà l'indirizzo `https://farmacia-esempio.calvizie.net/`.
+3. Premi **Crea**. Se il nome non era pulito (maiuscole, spazi, accenti), la schermata ne propone uno corretto e ti chiede di premere **Crea** di nuovo: controlla il nome proposto e, se va bene, premi **Crea**. Se non va bene, correggilo e scrivi a Claude il nome definitivo.
+
+**Fatto quando:** la schermata mostra il link al nuovo sito.
+
+## B. Accedi al nuovo sito (solo landing)
+
+1. Apri il link del nuovo sito mostrato al passo A.
+2. Accedi con **le stesse credenziali di calvizie.net**. Sul sottodominio serve un accesso nuovo: è normale.
+3. La pagina della landing è **già creata**, come bozza, con il template giusto, ed è la **home page** del nuovo sito. **Non creare una pagina nuova, non scegliere il template e non impostare il permalink.**
+
+**Tracciamento:** non c'è nulla da fare, il contenitore delle statistiche del sito viene caricato in automatico.
+
+Da qui in avanti tutto si fa **sul nuovo sito** (nella barra in alto del browser c'è l'indirizzo del sottodominio), non su calvizie.net.
+
+**Fatto quando:** sei dentro l'amministrazione del nuovo sito e in **Pagine > Tutte le pagine** vedi la landing in bozza.
 
 ## 1. Carica le foto e fai sistemare gli indirizzi
 
 Si fa **per primo**: l'HTML contiene indirizzi provvisori che vanno corretti prima di incollarlo.
 
-1. Menu a sinistra: **Media > Aggiungi nuovo**. Trascina tutte le foto dell'elenco nella scheda, insieme e nello stesso giorno (finiscono così nella stessa cartella).
+1. Menu a sinistra: **Media > Aggiungi nuovo** (per le landing, quello del **nuovo sito**: le foto si caricano lì). Trascina tutte le foto dell'elenco nella scheda, insieme e nello stesso giorno (finiscono così nella stessa cartella).
 2. Controlla i nomi sotto le anteprime: WordPress aggiunge "-1" se esiste già un file con lo stesso nome, e "-scaled" se la foto è più larga di 2560 pixel. Se un nome è cambiato, annotalo.
 3. Vai in **Media > Libreria**, clicca una delle foto caricate e premi **Copia l'URL negli appunti**. Avrai un indirizzo come
-   `https://calvizie.net/wp-content/uploads/2026/11/foto-apertura.jpg`.
+   `https://calvizie.net/wp-content/uploads/2026/11/foto-apertura.jpg` (per una landing sarà del tipo `https://farmacia-esempio.calvizie.net/wp-content/uploads/sites/7/2026/11/foto-apertura.jpg`).
 4. Nell'HTML (e nel CSS, se contiene foto) ogni foto è scritta così:
    `https://calvizie.net/wp-content/uploads/FOTO/foto-apertura.jpg`.
    Va sostituito **`https://calvizie.net/wp-content/uploads/FOTO/`** con la cartella vera. Due modi:
    - **con Claude (più semplice):** incolla a Claude l'indirizzo copiato al punto 3 (e i nomi cambiati al punto 2, se ce ne sono) e chiedigli i file con gli indirizzi giusti. Da qui in avanti usa **solo** i file nuovi;
-   - **a mano:** apri il file con un editor di testo (TextEdit, Blocco note), usa **Trova e sostituisci** (su Mac: Modifica > Trova > Trova e sostituisci; su Windows: Ctrl+H), sostituisci tutto e salva. La cartella è l'indirizzo del punto 3 senza il nome del file: `https://calvizie.net/wp-content/uploads/2026/11/`.
+   - **a mano:** apri il file con un editor di testo (TextEdit, Blocco note), usa **Trova e sostituisci** (su Mac: Modifica > Trova > Trova e sostituisci; su Windows: Ctrl+H), sostituisci tutto e salva. La cartella è l'indirizzo del punto 3 senza il nome del file: `https://calvizie.net/wp-content/uploads/2026/11/` (per una landing, tutto quello che precede il nome del file, sottodominio compreso).
 
 **Fatto quando:** nei file non compare più la parola `FOTO/`.
 
@@ -42,15 +66,19 @@ Salta questo passo per le landing, o se la scheda dice che la categoria esiste g
 
 ## 3. Crea la pagina e scegli il template
 
+**Landing:** la pagina esiste già (passo B). Non crearla e non scegliere il template. Fai solo questo: menu **Pagine > Tutte le pagine**, clicca il titolo della landing in bozza e controlla che sotto l'editor compaiano i riquadri **HTML della pagina** e **CSS della pagina**, e a destra **Form della landing/pagina**. Se non compaiono, clicca **Salva bozza** e ricarica; se mancano ancora, scrivi all'amministratore del sito. **Fatto quando** vedi i riquadri; poi vai al passo 4. Il resto di questo passo è solo per le pagine partner.
+
+**Pagina partner:**
+
 1. Menu a sinistra: **Pagine > Aggiungi pagina**.
 2. Scrivi il **titolo** della pagina (dalla scheda). Il riquadro grande del contenuto resta **vuoto**: non serve.
 3. Nel riquadro **Attributi della pagina** (colonna di destra), menu **Template**, scegli:
-   - landing → **Landing (Pagine Calvizie)**;
-   - pagina partner → **Pagina partner (Pagine Calvizie)**.
+   - **Pagina partner (Pagine Calvizie)**.
 4. Compaiono i riquadri **HTML della pagina** e **CSS della pagina** (sotto l'editor) e **Form della landing/pagina** (a destra); per le partner anche **Categoria collegata**. Se non compaiono, clicca **Salva bozza** e ricarica la pagina.
    Se nel menu **Template** non ci sono le due voci "(Pagine Calvizie)", oppure i riquadri non compaiono nemmeno dopo aver ricaricato, fermati e scrivi all'amministratore del sito: "Nella pagina che sto creando non vedo [i template Pagine Calvizie / i riquadri HTML e CSS della pagina]: puoi controllare che il plugin Pagine Calvizie sia attivo e che il mio utente abbia il permesso di modificare le pagine Calvizie?"
 5. Clicca **Salva bozza**.
-6. **Solo landing:** sotto il titolo compare **Permalink** con il pulsante **Modifica**. Cliccalo, scrivi lo **slug** della scheda e premi **OK**. (Per le pagine partner non serve: l'indirizzo pubblico è quello della categoria.)
+
+(Il permalink non si imposta: l'indirizzo pubblico è quello della categoria.)
 
 **Fatto quando:** la bozza è salvata e vedi i riquadri del punto 4.
 
@@ -107,6 +135,7 @@ Le colonne del foglio si creano da sole al primo contatto: Data, Pagina, i campi
    - "Il foglio Google di destinazione non è condiviso con l'account di servizio" → passo 7, punto 2;
    - "Il modulo è attivo ma mancano la destinazione dei contatti o l'email di riserva" → passo 7, punti 1 e 3;
    - "reCAPTCHA non configurato: il form non è protetto dallo spam." → non dipende dalla pagina: chiedi all'amministratore del sito prima di pubblicare;
+   - "Le landing nuove vanno su un sottodominio..." (regola R17) → la landing è stata creata su calvizie.net invece che su un sottodominio: non pubblicarla lì, rifai dal passo A;
    - per tutto il resto: copia il testo della barra a Claude e chiedi di correggere i file.
 3. Correggi nella scheda dell'editor, clicca **Salva bozza**, poi ricarica la scheda dell'anteprima. La barra la vedono solo gli amministratori.
 4. Guarda la pagina anche dal telefono (o restringendo la finestra): testi leggibili, foto al loro posto, modulo usabile.
@@ -131,8 +160,8 @@ Se la scheda dice che qualcuno deve approvare la pagina (per esempio il partner)
 Solo quando la barra rossa non c'è più e hai le approvazioni previste dalla scheda.
 
 1. Clicca **Pubblica**.
-2. Apri l'URL finale (dalla scheda) in una finestra anonima e controlla che si veda come in anteprima, anche da telefono.
-3. Se la scheda prevede una voce di menu: **Aspetto > Menu**, aggiungi la categoria (partner) o la pagina (landing) nel punto indicato, **Salva menu**.
+2. Apri l'URL finale (dalla scheda; per una landing è `https://<nome>.calvizie.net/`, la home del nuovo sito) in una finestra anonima e controlla che si veda come in anteprima, anche da telefono.
+3. Solo pagina partner, se la scheda prevede una voce di menu: **Aspetto > Menu**, aggiungi la categoria nel punto indicato, **Salva menu**. (Una landing sul sottodominio non ha menu.)
 4. Se hai creato un link di anteprima, ora puoi revocarlo (passo 10).
 
 ## 12. Attiva il modulo
@@ -147,6 +176,7 @@ Solo quando chi è indicato nella scheda ("Chi dà il via per attivarlo") ha dat
 
 Su una pagina già pubblicata le modifiche ai riquadri **HTML della pagina**, **CSS della pagina** e **Form della landing/pagina** vanno online appena clicchi **Aggiorna**: l'**Anteprima** non le mostra prima. Tieni da parte i file della versione precedente e controlla la pagina subito dopo aver aggiornato (in una finestra anonima, anche dal telefono); se qualcosa non va, rincolla la versione precedente e **Aggiorna**.
 
+- Per una landing, le modifiche si fanno sempre **sul sottodominio** (passo B), non su calvizie.net.
 - Testi o grafica: chiedi a Claude i file aggiornati. Se ci sono foto nuove rifai il passo 1 solo per quelle (le foto già caricate restano), poi i passi 4-5, **Aggiorna** e controlla subito la pagina.
 - Una foto da sostituire: caricala con un **nome nuovo** (per esempio con "-v2" in fondo) e fai cambiare a Claude il suo indirizzo nell'HTML. Con lo stesso nome molti browser continuerebbero a mostrare quella vecchia.
 - Sospendere il modulo: riquadro **Form della landing/pagina**, **Sospeso**, **Aggiorna**. Per riattivarlo: **Attivo**, **Aggiorna**. Controlla subito dopo che sulla pagina compaia il messaggio (o il modulo).

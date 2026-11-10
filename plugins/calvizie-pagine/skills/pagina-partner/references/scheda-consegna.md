@@ -17,12 +17,13 @@ Copia il modello qui sotto e compilalo.
 
 ## La pagina
 - Tipo: <landing | pagina partner>
-- Template da scegliere in WordPress: <"Landing (Pagine Calvizie)" | "Pagina partner (Pagine Calvizie)">
+- Nome del sottodominio (solo landing): <minuscole, numeri e trattini, 3-40 caratteri, es. farmacia-esempio; l'indirizzo sarà https://<nome>.calvizie.net/. Nessun altro dato: il tracciamento è automatico>
+- Template da scegliere in WordPress: <landing: nessuno, la pagina nasce già con il template giusto | partner: "Pagina partner (Pagine Calvizie)">
 - Titolo della pagina in WordPress: <titolo>
-- Slug: <slug, minuscolo con trattini, es. consulenza-gratuita>
-- URL finale: <landing: https://calvizie.net/<slug>/ | partner: l'indirizzo della categoria, es. https://calvizie.net/category/<slug-categoria>/>
+- Slug (solo pagina partner; la landing è la home del suo sottodominio e non ha slug): <slug, minuscolo con trattini, es. consulenza-gratuita>
+- URL finale: <landing: https://<nome-sottodominio>.calvizie.net/ | partner: l'indirizzo della categoria, es. https://calvizie.net/category/<slug-categoria>/>
 - Chi approva la pagina prima della pubblicazione: <persona o ruolo, per esempio il partner (gli si manda il link di anteprima) | nessuno>
-- Classe del contenitore: <x>-page (l'HTML è dentro <main class="<x>-page">)
+- Classe del contenitore: <x>-page (<x> = nome del sottodominio o slug, o un loro accorciamento) (l'HTML è dentro <main class="<x>-page">)
 - File da incollare:
   - <nome-file>.html → riquadro "HTML della pagina"
   - <nome-file>.css → riquadro "CSS della pagina" (solo pagina partner; per la landing il CSS è già dentro l'HTML e il riquadro resta vuoto)
