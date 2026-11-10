@@ -23,6 +23,7 @@ Salta questo passo per le pagine partner. Serve una volta sola per ogni landing 
 1. Sul sito **calvizie.net** (quello principale), menu a sinistra: **Pagine > Crea landing su sottodominio**.
 2. Scrivi il **nome del sottodominio** indicato nella scheda (o proposto da Claude): solo lettere minuscole, numeri e trattini, da 3 a 40 caratteri (esempio: `farmacia-esempio`). Sarà l'indirizzo `https://farmacia-esempio.calvizie.net/`.
 3. Premi **Crea**. Se il nome non era pulito (maiuscole, spazi, accenti), la schermata ne propone uno corretto e ti chiede di premere **Crea** di nuovo: controlla il nome proposto e, se va bene, premi **Crea**. Se non va bene, correggilo e scrivi a Claude il nome definitivo.
+   Se la schermata dice **"Questo nome è riservato"** o **"Questo nome è già usato"**, il sottodominio non si può usare (è già occupato da un altro servizio o da un'altra landing, anche vecchia): scegline un altro insieme a Claude e premi **Crea**.
 
 **Fatto quando:** la schermata mostra il link al nuovo sito.
 

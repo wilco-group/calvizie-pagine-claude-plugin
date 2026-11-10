@@ -25,7 +25,7 @@ Se la richiesta è una pagina partner, usa la skill **pagina-partner**. Se non �
 Raccogli queste informazioni. Chiedi solo quelle che mancano, **una domanda alla volta**; se la persona ha fretta, procedi e segna le risposte mancanti come "DA DECIDERE" nella scheda.
 
 1. Obiettivo della landing e a chi parla.
-2. Nome del sottodominio (l'indirizzo), per esempio `consulenza-gratuita` per `https://consulenza-gratuita.calvizie.net/`. Proponilo tu dal nome del cliente o della landing, normalizzato: minuscole, senza accenti, spazi e simboli sostituiti da trattini, da 3 a 40 caratteri, solo lettere, numeri e trattini; fallo confermare. Non chiedere altro per il tracciamento: il contenitore delle statistiche del sito è caricato in automatico.
+2. Nome del sottodominio (l'indirizzo), per esempio `consulenza-gratuita` per `https://consulenza-gratuita.calvizie.net/`. Proponilo tu dal nome del cliente o della landing, normalizzato: minuscole, senza accenti, spazi e simboli sostituiti da trattini, da 3 a 40 caratteri, solo lettere, numeri e trattini; fallo confermare. Non proporre nomi generici o tecnici (`www`, `mail`, `smtp`, `imap`, `pop3`, `ftp`, `admin`, `api`, `cdn`, `test`, `dev`, `demo`, `staging`, `send`…): sono riservati, e se la schermata dice che un nome è riservato o già usato proponine un altro. Non chiedere altro per il tracciamento: il contenitore delle statistiche del sito è caricato in automatico.
 3. Testi: quelli già approvati vanno usati **parola per parola**. Se li scrivi tu, dillo e falli approvare.
 4. Foto: quali sono, oppure quali servono.
 5. Modulo contatti: c'è? quali campi? quali consensi? dove arrivano i contatti (foglio Google), email di riserva, attivo o sospeso al lancio?
@@ -189,7 +189,7 @@ Per una landing **nuova** il sottodominio si crea per primo (passo A) con il nom
 
 **Un passo alla volta.** Per ogni passo scrivi:
 
-1. il numero e il nome del passo, e quanti ne restano (per esempio "Passo 4 di 11 · Apri la pagina della landing");
+1. il numero e il nome del passo, e quanti ne restano (per esempio "Passo 4 di 11 · Apri la pagina della landing (passo 3 della guida)"): aggiungi sempre il numero del passo della guida, perché la barra rossa e la guida usano quei numeri;
 2. **dove**: il percorso esatto nel menu e il nome del riquadro (per esempio "menu a sinistra **Pagine > Aggiungi pagina**", "riquadro **Form della landing/pagina**, colonna di destra");
 3. **cosa fare**, in frasi brevi numerate;
 4. **cosa incollare**: ogni valore preso dalla scheda (titolo, nome del sottodominio o slug, nome e slug della categoria, indirizzo del foglio, email di riserva, titolo e descrizione SEO) in un **blocco di codice a sé**, uno per campo, preceduto dal nome esatto del campo in cui va. Niente valori dentro le frasi: così si copiano senza errori. Per HTML e CSS indica il **nome del file** da aprire e copiare per intero, non incollarne il contenuto nella chat;
