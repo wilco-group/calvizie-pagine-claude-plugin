@@ -25,7 +25,7 @@ Se la richiesta è una landing, usa la skill **landing**. Se non è chiaro, chie
 Raccogli queste informazioni. Chiedi solo quelle che mancano, **una domanda alla volta**; se la persona ha fretta, procedi e segna le risposte mancanti come "DA DECIDERE" nella scheda.
 
 1. Chi è il partner e cosa deve capire chi legge la pagina.
-2. Nome e slug della categoria (per esempio `farmacia-esempio`), e sotto quale voce del menu va.
+2. Nome e slug della categoria (per esempio `farmacia-esempio`). Non serve chiedere dove va nel menu: alla pubblicazione la categoria compare da sola sotto la voce "Partnership".
 3. Testi: quelli già approvati vanno usati **parola per parola**. Se li scrivi tu, dillo e falli approvare.
 4. Foto e logo del partner: quali sono, oppure quali servono.
 5. Modulo contatti: c'è? quali campi? quali consensi (per esempio la comunicazione dei dati al partner)? dove arrivano i contatti (foglio Google), email di riserva, attivo o sospeso al lancio, chi dà il via?

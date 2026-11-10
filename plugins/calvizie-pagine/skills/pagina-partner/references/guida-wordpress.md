@@ -162,7 +162,7 @@ Solo quando la barra rossa non c'è più e hai le approvazioni previste dalla sc
 
 1. Clicca **Pubblica**.
 2. Apri l'URL finale (dalla scheda; per una landing è `https://<nome>.calvizie.net/`, la home del nuovo sito) in una finestra anonima e controlla che si veda come in anteprima, anche da telefono.
-3. Solo pagina partner, se la scheda prevede una voce di menu: **Aspetto > Menu**, aggiungi la categoria nel punto indicato, **Salva menu**. (Una landing sul sottodominio non ha menu.)
+3. Solo pagina partner: la voce di menu si crea da sola. Ricarica la home di calvizie.net e controlla che la categoria compaia sotto **Partnership** nel menu in alto (può volerci qualche secondo, il tempo che si svuoti la cache). Se dopo la pubblicazione WordPress mostra un avviso giallo "Voce "Partnership" non trovata nel menu", aggiungi la categoria a mano: **Aspetto > Menu**, sotto **Partnership**, **Salva menu**. (Una landing sul sottodominio non ha menu.)
 4. Se hai creato un link di anteprima, ora puoi revocarlo (passo 10).
 
 ## 12. Attiva il modulo
