@@ -89,7 +89,7 @@ Corretto: categoria "Partner" selezionata.
 Sbagliato: nessuna categoria.
 
 ## R17
-Landing nuova (modello "Landing (Pagine Calvizie)") sul sito principale di un multisite: le landing nuove vanno su un sottodominio, da Pagine Calvizie > Crea landing su sottodominio. Il vecchio modello "Landing HTML" non è interessato.
+Landing nuova (modello "Landing (Pagine Calvizie)") sul sito principale di un multisite: le landing nuove vanno su un sottodominio, da Pagine > Crea landing su sottodominio. Il vecchio modello "Landing HTML" non è interessato.
 
 Corretto: landing creata su un sottodominio.
 
