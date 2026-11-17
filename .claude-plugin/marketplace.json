@@ -11,7 +11,7 @@
       "name": "calvizie-pagine",
       "source": "./plugins/calvizie-pagine",
       "description": "Progetta landing (per hairnetwork.it) e pagine partner (per calvizie.net): HTML e CSS che il plugin Pagine Calvizie accetta senza ritocchi, scheda di consegna compilata e guida per pubblicare.",
-      "version": "1.4.0"
+      "version": "1.4.1"
     }
   ]
 }

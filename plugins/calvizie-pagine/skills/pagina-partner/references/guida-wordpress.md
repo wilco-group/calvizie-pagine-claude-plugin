@@ -209,3 +209,27 @@ Su una pagina già pubblicata le modifiche ai riquadri **HTML della pagina**, **
 - Testi o grafica: chiedi a Claude i file aggiornati. Se ci sono foto nuove rifai il passo 1 solo per quelle (le foto già caricate restano), poi i passi 4-5, **Aggiorna** e controlla subito la pagina.
 - Una foto da sostituire: caricala con un **nome nuovo** (per esempio con "-v2" in fondo) e fai cambiare a Claude il suo indirizzo nell'HTML. Con lo stesso nome molti browser continuerebbero a mostrare quella vecchia.
 - Sospendere il modulo: riquadro **Form della landing/pagina**, **Sospeso**, **Aggiorna**. Per riattivarlo: **Attivo**, **Aggiorna**. Controlla subito dopo che sulla pagina compaia il messaggio (o il modulo).
+
+## Impostazioni del sito hairnetwork.it (una volta sola, o quando cambiano)
+
+Valgono per **tutte** le landing di hairnetwork.it e si vedono subito su tutte le pagine. Non riguardano le pagine partner.
+
+1. Su hairnetwork.it (passo A), menu a sinistra: **Impostazioni > Impostazioni del sito**.
+2. Compila i campi con i valori che ti hanno dato:
+   - **ID del contenitore Google Tag Manager:** solo l'ID, del tipo `GTM-ABC1234`, non tutto il codice. Se lo lasci vuoto non parte nessun tracciamento e nessun banner dei cookie: le pagine non vanno pubblicate per le campagne finché non c'è.
+   - **Testo del piè di pagina:** ragione sociale, sede e partita IVA (è già compilato: cambialo solo se te lo chiedono).
+   - **Link alla Privacy Policy** e **Link alla Cookie Policy:** gli indirizzi completi che iniziano con `https://`.
+   - **Preferenze cookie:** spunta la casella quando il banner dei cookie è attivo (arriva dal contenitore GTM).
+3. Clicca **Salva le impostazioni**. Se un valore non è valido, la pagina lo dice in rosso e quel valore non viene salvato.
+
+**Fatto quando:** in alto compare "Impostazioni salvate" e, aprendo una landing (anche dal link di anteprima), in fondo vedi il piè di pagina con i link giusti.
+
+Se nel menu **Impostazioni** non vedi **Impostazioni del sito**, controlla di essere su hairnetwork.it e non su calvizie.net; se sei sul sito giusto, chiedi all'amministratore di abilitarti.
+
+## Collegare il modulo a un foglio che ha già le sue colonne
+
+Quando una landing deve scrivere in un foglio Google già esistente (per esempio dopo uno spostamento), il foglio va condiviso come **Editor** con l'indirizzo mostrato nel riquadro **Form della landing/pagina**, e i campi del modulo vanno collegati alle colonne del foglio.
+
+1. Apri il foglio e copia, così come sono scritte, le intestazioni della prima riga (per esempio "Data", "Nome", "Telefono").
+2. Incollale a Claude dicendo quale campo del modulo va in quale colonna: Claude ti rifà l'HTML con i collegamenti (`data-colonna`).
+3. Rifai il passo 4 (incolla l'HTML) e **Aggiorna**, poi fai un invio di prova (passo 12) e controlla che i dati finiscano nelle colonne giuste.
