@@ -1,4 +1,4 @@
-# Stile delle pagine di calvizie.net
+# Stile delle pagine
 
 Le pagine nuove devono sembrare della stessa famiglia di quelle già online: le pagine partner dentro il sito e le landing di campagna. Questo file raccoglie colori, misure e componenti comuni. Usali così come sono; cambia solo l'**accento** del partner (vedi sotto) e i testi.
 
@@ -154,9 +154,9 @@ Riferimento: le landing di campagna già online. La pagina non ha il menu del si
 
 - Azzera il margine del browser e dai lo sfondo chiaro a tutta la pagina: `body{margin:0;background:#f5f7fb}` (è l'unico selettore fuori da `.<x>-page`).
 
-- **Testata co-brand** in alto, bianca con bordo sotto, alta circa 62px: nome o logo del partner, una linea verticale sottile, "con **Calvizie.net**" in piccolo. Facoltativa un'etichetta verde a destra (per esempio "Centro verificato").
+- **Testata** in alto, bianca con bordo sotto, alta circa 62px: solo il nome o il logo del centro (nessun co-brand e nessun riferimento al sito del network). Facoltativa un'etichetta verde a destra (per esempio "Consulenza gratuita").
 - **Il modulo sta nell'apertura**, nella colonna destra (larga circa 410px), in una scheda bianca con bordo arancio di 2px e un nastro arancio in cima con l'invito ("Prima consulenza gratuita"). Sotto il pulsante, 2-3 rassicurazioni con la spunta verde ("Nessun impegno", "Ti ricontattiamo entro 24 ore").
 - Nell'apertura, sotto il lead: un elenco di vantaggi su due colonne con cerchietti dell'accento e la spunta bianca.
 - **Invito finale** prima del piè di pagina: fascia blu a tutta larghezza (`linear-gradient(135deg,var(--blu-scuro),var(--blu))`), titolo bianco, un pulsante arancio che porta al modulo (`href="#modulo"`).
-- **Piè di pagina** semplice: fondo `#0f1f45`, testo bianco al 60%, centrato, piccolo.
+- **Chiusura e piè di pagina:** la landing **non** ha un piè di pagina suo con dati societari o link alle informative: li aggiunge il sito. Dopo l'invito finale basta, se vuoi, una fascia semplice di chiusura (fondo `#0f1f45`, testo bianco al 75%, centrato) con il nome del centro.
 - Pulsanti a tutta larghezza dentro il modulo; il pulsante del modulo un po' più grande (`padding:16px 20px`) con un'ombra arancio leggera.

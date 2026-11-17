@@ -2,7 +2,7 @@
 
 Plugin per Claude con due skill per progettare le pagine di [calvizie.net](https://calvizie.net) in modo che il plugin WordPress **Pagine Calvizie** le accetti senza ritocchi:
 
-- **landing** — landing page a sé (senza menu del sito), per esempio per le campagne; ogni landing nuova vive in un sottodominio (`<nome>.calvizie.net`) che la guida fa creare per primo;
+- **landing** — landing page a sé (senza menu), per esempio per le campagne. Dalla versione 1.4.0 le landing vivono su un sito separato, **https://hairnetwork.it**, all'indirizzo `https://hairnetwork.it/<slug>`, e non contengono alcun riferimento a calvizie.net (niente marchio, link, immagini o newsletter); il sito aggiunge da solo tracciamento, piè di pagina comune e noindex; i testi sono neutri (regole Meta sulle inserzioni);
 - **pagina-partner** — pagina di un partner dentro il sito, con sotto gli articoli della sua categoria.
 
 Per ogni pagina Claude consegna l'HTML (e il CSS per le pagine partner), l'elenco delle foto, la **scheda di consegna** compilata e la **guida passo passo** per pubblicarla in WordPress.
@@ -28,7 +28,7 @@ Se il marketplace non è disponibile, scarica gli zip dalla pagina [Releases](ht
 /plugin install calvizie-pagine@calvizie-pagine
 ```
 
-Poi basta chiedere, per esempio: "fai una landing per Calvizie.net per la consulenza gratuita" oppure "fai una pagina partner per Calvizie.net per la Farmacia Esempio".
+Poi basta chiedere, per esempio: "fai una landing per la consulenza gratuita del Centro Esempio" oppure "fai una pagina partner per Calvizie.net per la Farmacia Esempio".
 
 ## Contenuto
 
@@ -46,7 +46,7 @@ In ogni skill, `references/` contiene:
 
 - `regole-pagine.md` — le regole controllate dal plugin WordPress (R01-R12 e R17). **Non modificarlo qui**: la fonte unica è `docs/regole-pagine.md` del repository del plugin WordPress;
 - `scheda-consegna.md` — il modello della scheda di consegna;
-- `guida-wordpress.md` — la guida per pubblicare (i passi A e B, creare il sottodominio e accedervi, valgono solo per le landing);
+- `guida-wordpress.md` — la guida per pubblicare (il passo A, accedere a hairnetwork.it, vale solo per le landing; categoria, collegamento categoria e SEO solo per le pagine partner);
 - `stile-pagine.md` — colori, misure e componenti delle pagine già online, da seguire perché le pagine nuove siano della stessa famiglia.
 
 Gli esempi sono inventati.
@@ -68,7 +68,7 @@ Per controllare un esempio con le stesse regole del plugin, dal repository WordP
 php bin/check-html.php <file.html> [file.css] --type=partner   # oppure --type=landing
 ```
 
-Gli esempi usano l'indirizzo provvisorio `https://calvizie.net/wp-content/uploads/FOTO/`, che la regola R02 segnala di proposito finché non viene sostituito con la cartella vera della Libreria media: per controllarli, sostituiscilo prima con una cartella qualsiasi (per esempio `https://calvizie.net/wp-content/uploads/2026/11/`).
+Gli esempi usano l'indirizzo provvisorio `https://hairnetwork.it/wp-content/uploads/FOTO/` (landing) e `https://calvizie.net/wp-content/uploads/FOTO/` (pagina partner), che la regola R02 segnala di proposito finché non viene sostituito con la cartella vera della Libreria media: per controllarli, sostituiscilo prima con una cartella qualsiasi (per esempio `https://hairnetwork.it/wp-content/uploads/2026/11/`).
 
 ## Pubblicare una nuova versione
 

@@ -17,13 +17,13 @@ Copia il modello qui sotto e compilalo.
 
 ## La pagina
 - Tipo: <landing | pagina partner>
-- Nome del sottodominio (solo landing): <minuscole, numeri e trattini, 3-40 caratteri, es. farmacia-esempio; l'indirizzo sarà https://<nome>.calvizie.net/. Nessun altro dato: il tracciamento è automatico>
-- Template da scegliere in WordPress: <landing: nessuno, la pagina nasce già con il template giusto | partner: "Pagina partner (Pagine Calvizie)">
+- Sito: <landing: https://hairnetwork.it (sito a parte, con il suo dominio) | partner: https://calvizie.net>
+- Template da scegliere in WordPress: <landing: "Landing (Pagine Calvizie)" | partner: "Pagina partner (Pagine Calvizie)">
 - Titolo della pagina in WordPress: <titolo>
-- Slug (solo pagina partner; la landing è la home del suo sottodominio e non ha slug): <slug, minuscolo con trattini, es. consulenza-gratuita>
-- URL finale: <landing: https://<nome-sottodominio>.calvizie.net/ | partner: l'indirizzo della categoria, es. https://calvizie.net/category/<slug-categoria>/>
+- Slug: <landing: nome breve del centro, solo minuscole, numeri e trattini, es. farmacia-esempio | partner: solo se serve, es. consulenza-gratuita>
+- URL finale: <landing: https://hairnetwork.it/<slug> | partner: l'indirizzo della categoria, es. https://calvizie.net/category/<slug-categoria>/>
 - Chi approva la pagina prima della pubblicazione: <persona o ruolo, per esempio il partner (gli si manda il link di anteprima) | nessuno>
-- Classe del contenitore: <x>-page (<x> = nome del sottodominio o slug, o un loro accorciamento) (l'HTML è dentro <main class="<x>-page">)
+- Classe del contenitore: <x>-page (<x> = slug o un suo accorciamento) (l'HTML è dentro <main class="<x>-page">)
 - File da incollare:
   - <nome-file>.html → riquadro "HTML della pagina"
   - <nome-file>.css → riquadro "CSS della pagina" (solo pagina partner; per la landing il CSS è già dentro l'HTML e il riquadro resta vuoto)
@@ -37,14 +37,16 @@ Copia il modello qui sotto e compilalo.
 - Titolo SEO: <massimo 60 caratteri circa>
 - Descrizione SEO: <massimo 155 caratteri circa>
 - Immagine di condivisione (Open Graph): <nome-file della foto>
-- Dove si compilano: <landing: sono già nell'HTML, in <title> e <meta name="description"> | partner: nel riquadro Rank Math della pagina>
-- Indicizzazione: <indicizzata | non indicizzata (noindex), per esempio per una landing solo da campagne>
+- Dove si compilano: <landing: nell'HTML, in <title> e <meta name="description"> (facoltativi, senza riferimenti a calvizie.net; nessun passo SEO in WordPress) | partner: nel riquadro Rank Math della pagina>
+- Indicizzazione: <partner: indicizzata | non indicizzata (noindex) | landing: sempre noindex, la mette il sito da solo>
 
 ## Modulo contatti
 - Il modulo c'è? <sì | no>
 - Campi del modulo (diventano le colonne del foglio): <nome, email, telefono, messaggio, privacy, ...>
 - Campi obbligatori: <...>
 - Intestazioni già presenti nel foglio, se ci sono: <es. "Data e ora", "Nome e cognome", ...> (altrimenti il plugin le crea da solo)
+- Indirizzo dell'informativa privacy (HairNetwork) (solo landing): <indirizzo completo | DA DECIDERE: chi lo fornisce>. Il link nel consenso del modulo punta qui, mai a calvizie.net
+- Nome del modulo per GTM (form_name) (solo landing, solo se indicato): <nome da scrivere nel riquadro "Form della landing/pagina"; se non è indicato lascia il campo vuoto: sarà uguale allo slug>
 - Consensi: <privacy obbligatorio; consenso_<nome> obbligatorio/facoltativo, con il testo della casella>
 - Destinazione dei contatti: <foglio Google da usare (nome del foglio e chi lo crea/condivide) | DA DECIDERE: chi decide>
 - Email di riserva (riceve i contatti se il foglio non risponde): <indirizzo email | DA DECIDERE: chi decide>
@@ -64,8 +66,11 @@ Copia il modello qui sotto e compilalo.
 - <se non ce ne sono: "nessuna: la pagina è pronta">
 
 ## Foto
-Indirizzo provvisorio nell'HTML: https://calvizie.net/wp-content/uploads/FOTO/<nome-file>
-Dopo il caricamento in Libreria media va sostituito "https://calvizie.net/wp-content/uploads/FOTO/" con la cartella vera (vedi la guida di pubblicazione).
+Indirizzo provvisorio nell'HTML:
+- landing: https://hairnetwork.it/wp-content/uploads/FOTO/<nome-file> (le foto si caricano nei Media di hairnetwork.it);
+- pagina partner: https://calvizie.net/wp-content/uploads/FOTO/<nome-file> (le foto si caricano nei Media di calvizie.net).
+
+Dopo il caricamento in Libreria media va sostituita la parte fino a "FOTO/" compresa con la cartella vera (vedi la guida di pubblicazione).
 
 | File | Dove si vede | Testo alternativo (alt) | Note |
 |---|---|---|---|
