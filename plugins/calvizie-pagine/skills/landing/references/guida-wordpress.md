@@ -157,7 +157,7 @@ Vale per landing e partner.
    - "Il foglio Google di destinazione non è condiviso con l'account di servizio" → passo 7, punto 2;
    - "Il modulo è attivo ma mancano la destinazione dei contatti o l'email di riserva" → passo 7, punti 1 e 3;
    - "reCAPTCHA non configurato: il form non è protetto dallo spam." → non dipende dalla pagina: chiedi all'amministratore del sito prima di pubblicare;
-   - "Le landing non vanno create su calvizie.net ma su hairnetwork.it" (regola R17, il testo esatto può variare) → la landing è stata creata sul sito sbagliato: non pubblicarla lì, rifai dal passo A su hairnetwork.it;
+   - "Le landing nuove non vanno su calvizie.net: creale nel sito hairnetwork.it..." (regola R17) → la landing è stata creata sul sito sbagliato: non pubblicarla lì, rifai dal passo A su hairnetwork.it;
    - per tutto il resto: copia il testo della barra a Claude e chiedi di correggere i file.
 3. Correggi nella scheda dell'editor, clicca **Salva bozza**, poi ricarica la scheda dell'anteprima. La barra la vedono solo gli amministratori.
 4. Guarda la pagina anche dal telefono (o restringendo la finestra): testi leggibili, foto al loro posto, modulo usabile.
